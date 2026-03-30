@@ -1,11 +1,16 @@
 # Rugby World Cup Livery
 
-A static website tribute to Rugby World Cup history, beginning with a landing page and a champions page.
+A static website tribute to Rugby World Cup history, now being reshaped into a lower-fi wireframe with year-led homepage navigation.
+
+Live focus: keep the project simple, readable, and easy to publish with GitHub Pages while it grows into a richer archive over time.
 
 ## Current pages
 
-- `index.html` - landing page
+- `index.html` - homepage wireframe with year sections
+- `about.html` - short project/about page
 - `champions.html` - champions tribute page
+- `hosts.html` - host nations page
+- `teams.html` - placeholder page
 - `styles.css` - shared styling
 
 ## Why this version is simple
@@ -22,7 +27,7 @@ This project is intentionally built with plain HTML and CSS so the focus stays o
 
 ## Next build ideas
 
-- Add a hosts page
 - Add team pages
+- Add a venues/stadiums page
 - Add head-to-head records
 - Add structured data files for analysis work
