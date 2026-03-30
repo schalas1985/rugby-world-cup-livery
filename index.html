@@ -6,7 +6,7 @@
     <title>Rugby World Cup Livery</title>
     <meta
       name="description"
-      content="A tribute website to Rugby World Cup history, champions, and rivalries."
+      content="A low-fi homepage mockup for Rugby World Cup Livery with year-based navigation."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,86 +18,197 @@
   </head>
   <body class="page-home">
     <header class="site-header">
-      <a class="brand-mark" href="index.html" aria-label="Rugby World Cup Livery home">
-        <span class="brand-mark__shield"></span>
-      </a>
+      <p class="site-title">Rugby World Cup Livery</p>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About Me</a>
         <a href="champions.html">Champions</a>
+        <a href="hosts.html">Hosts</a>
+        <a href="teams.html">Teams</a>
       </nav>
     </header>
 
     <main>
       <section class="hero hero-home">
+        <div class="hero-card">
+          <div class="hero-card__frame" aria-hidden="true">
+            <p class="hero-card__label">Placeholder visual</p>
+            <p class="hero-card__caption">
+              Low-fi animation placeholder for a rugby ball and the Webb Ellis
+              Cup. Real media can replace this later.
+            </p>
+          </div>
+        </div>
+
         <div class="hero-copy">
-          <p class="eyebrow">Rugby World Cup Archive</p>
           <h1>
-            a
-            <span>rugby</span>
+            rugby
             <span>world cup</span>
             <span>livery</span>
           </h1>
           <p class="hero-text">
-            A visual and historical tribute to the tournament, its champions,
-            host nations, and the matchups that shaped rugby history.
+            A simpler homepage wireframe where the tournament years drive the
+            archive and lead into photo, host, and champion sections.
           </p>
-        </div>
 
-        <div class="hero-card">
-          <div class="hero-card__frame">
-            <div class="hero-card__glow"></div>
-            <div class="hero-card__content">
-              <p class="hero-card__label">Since 1987</p>
-              <h2>The Webb Ellis Cup, the stories behind it, and the teams chasing it.</h2>
-              <p>
-                Start with champions, then build toward the head-to-head archive
-                and tournament data you wanted to find in one place.
-              </p>
+          <section class="wireframe-panel" aria-label="Tournament year navigation">
+            <h2>Tournament years</h2>
+            <p class="wireframe-note">
+              Click a year to jump to the section below. Hover-style photo ideas
+              can be explored later once the wireframe feels right.
+            </p>
+            <div class="timeline-strip">
+              <a href="#year-1987">1987</a>
+              <a href="#year-1991">1991</a>
+              <a href="#year-1995">1995</a>
+              <a href="#year-1999">1999</a>
+              <a href="#year-2003">2003</a>
+              <a href="#year-2007">2007</a>
+              <a href="#year-2011">2011</a>
+              <a href="#year-2015">2015</a>
+              <a href="#year-2019">2019</a>
+              <a href="#year-2023">2023</a>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 
-      <section class="timeline-strip" aria-label="Tournament years">
-        <a href="champions.html">1987</a>
-        <a href="champions.html">1991</a>
-        <a href="champions.html">1995</a>
-        <a href="champions.html">1999</a>
-        <a href="champions.html">2003</a>
-        <a href="champions.html">2007</a>
-        <a href="champions.html">2011</a>
-        <a href="champions.html">2015</a>
-        <a href="champions.html">2019</a>
-        <a href="champions.html">2023</a>
-        <a href="champions.html">Teams</a>
-      </section>
-
-      <section class="overview-grid">
-        <article class="overview-card">
-          <p class="overview-card__kicker">Why this site</p>
-          <h2>Built from curiosity</h2>
-          <p>
-            Rugby World Cup Livery begins with a simple question: how did one
-            team perform against another across tournaments, without jumping
-            across scattered pages?
-          </p>
+      <section class="year-sections" aria-label="Tournament overview sections">
+        <article id="year-1987" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 1987 champions</div>
+          <div class="year-card__content">
+            <h2>1987</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> New Zealand / Australia</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+              <p><strong>Page aim:</strong> Use this space for the winning moment, key facts, and a flag.</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+          </div>
         </article>
 
-        <article class="overview-card">
-          <p class="overview-card__kicker">What comes next</p>
-          <h2>From tribute to dataset</h2>
-          <p>
-            This first version focuses on story and design. The next versions
-            will add structured head-to-head results, hosts, teams, and analyst
-            style comparison views.
-          </p>
+        <article id="year-1991" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 1991 champions</div>
+          <div class="year-card__content">
+            <h2>1991</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> England / France / Ireland / Scotland / Wales</p>
+              <p><strong>Champions:</strong> Australia</p>
+              <p><strong>Page aim:</strong> Keep the layout the same so the story is easy to scan by year.</p>
+            </div>
+            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-1995" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 1995 champions</div>
+          <div class="year-card__content">
+            <h2>1995</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> South Africa</p>
+              <p><strong>Champions:</strong> South Africa</p>
+              <p><strong>Page aim:</strong> Leave room for a future image and short summary.</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-1999" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 1999 champions</div>
+          <div class="year-card__content">
+            <h2>1999</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Wales</p>
+              <p><strong>Champions:</strong> Australia</p>
+              <p><strong>Page aim:</strong> The structure is set first; styling can be refined later.</p>
+            </div>
+            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2003" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2003 champions</div>
+          <div class="year-card__content">
+            <h2>2003</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Australia</p>
+              <p><strong>Champions:</strong> England</p>
+              <p><strong>Page aim:</strong> This section can later support real media and richer tournament notes.</p>
+            </div>
+            <div class="flag-pill"><span>🏴</span> England flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2007" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2007 champions</div>
+          <div class="year-card__content">
+            <h2>2007</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> France</p>
+              <p><strong>Champions:</strong> South Africa</p>
+              <p><strong>Page aim:</strong> Keep repeated information in one format instead of scattered blocks.</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2011" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2011 champions</div>
+          <div class="year-card__content">
+            <h2>2011</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> New Zealand</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+              <p><strong>Page aim:</strong> This can later become a cleaner archive view or interactive gallery.</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2015" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2015 champions</div>
+          <div class="year-card__content">
+            <h2>2015</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> England</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+              <p><strong>Page aim:</strong> Same template, ready for stronger visuals later.</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2019" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2019 champions</div>
+          <div class="year-card__content">
+            <h2>2019</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Japan</p>
+              <p><strong>Champions:</strong> South Africa</p>
+              <p><strong>Page aim:</strong> The wireframe focuses on structure, not final decoration.</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+
+        <article id="year-2023" class="year-card">
+          <div class="year-card__media">Placeholder photo area for 2023 champions</div>
+          <div class="year-card__content">
+            <h2>2023</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> France</p>
+              <p><strong>Champions:</strong> South Africa</p>
+              <p><strong>Page aim:</strong> This gives the homepage a clear role as the first archive surface.</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
         </article>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>Rugby World Cup Livery</p>
-      <p>A passion project built with Codex and GitHub Pages.</p>
+      <p>Low-fi homepage exercise built for structure first.</p>
     </footer>
   </body>
 </html>
