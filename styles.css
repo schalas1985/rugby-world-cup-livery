@@ -10,6 +10,7 @@
   --radius-lg: 1.25rem;
   --radius-md: 0.9rem;
   --content-width: 1180px;
+  --edge-gap: max(1.5rem, calc((100vw - var(--content-width)) / 2));
 }
 
 * {
@@ -41,9 +42,9 @@ img {
 .site-header,
 .site-footer,
 .hero,
-.timeline-strip,
 .year-sections,
 .page-shell,
+.about-grid,
 .champions-layout,
 .hosts-layout {
   width: min(calc(100% - 3rem), var(--content-width));
@@ -55,8 +56,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.5rem 0 1rem;
-  border-bottom: 1px solid var(--line);
+  padding: 1.3rem 0 0.3rem;
 }
 
 .site-title {
@@ -65,6 +65,7 @@ img {
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.03em;
+  text-transform: lowercase;
 }
 
 .site-nav {
@@ -87,14 +88,14 @@ img {
 
 .hero-home {
   display: grid;
-  grid-template-columns: minmax(320px, 1.2fr) minmax(260px, 0.9fr);
-  gap: 1.5rem;
-  padding: 1.5rem 0 1rem;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 5.5fr) minmax(0, 3.5fr) minmax(110px, 1fr);
+  gap: 1.2rem;
+  padding: 3.5rem 0 1.8rem;
+  align-items: center;
+  min-height: calc(100vh - 6rem);
 }
 
 .hero-card,
-.wireframe-panel,
 .year-card,
 .champions-intro,
 .champions-table,
@@ -107,82 +108,38 @@ img {
 }
 
 .hero-card {
-  min-height: 490px;
-  padding: 1.25rem;
+  min-height: 525px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: block;
 }
 
 .hero-card__frame {
-  position: relative;
-  min-height: 100%;
-  border: 1px dashed #a79f90;
-  border-radius: calc(var(--radius-lg) - 0.2rem);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(239, 235, 226, 0.9)),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 34px,
-      rgba(95, 90, 82, 0.06) 34px,
-      rgba(95, 90, 82, 0.06) 35px
-    );
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 525px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fffdf9;
   overflow: hidden;
 }
 
 .hero-card__frame::before {
-  content: "";
-  position: absolute;
-  left: 11%;
-  bottom: 14%;
-  width: 35%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 2px solid rgba(50, 92, 70, 0.6);
-  background:
-    radial-gradient(circle at 32% 34%, #fefdf9 0 18%, transparent 18%),
-    radial-gradient(circle at 68% 66%, #fefdf9 0 18%, transparent 18%),
-    linear-gradient(135deg, rgba(50, 92, 70, 0.12), rgba(50, 92, 70, 0.3));
-  animation: float-ball 5.5s ease-in-out infinite;
+  content: none;
 }
 
 .hero-card__frame::after {
-  content: "";
-  position: absolute;
-  right: 12%;
-  top: 11%;
-  width: 24%;
-  height: 48%;
-  border: 2px solid rgba(140, 112, 54, 0.7);
-  border-radius: 42% 42% 14% 14% / 12% 12% 8% 8%;
-  background: linear-gradient(180deg, rgba(244, 231, 185, 0.95), rgba(199, 162, 76, 0.42));
-  box-shadow: inset 0 -16px 0 rgba(255, 255, 255, 0.38);
-  animation: float-cup 6.5s ease-in-out infinite;
-}
-
-.hero-card__label {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.hero-card__caption {
-  position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.55;
+  content: none;
 }
 
 .hero-copy {
   display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: 1rem;
+  align-content: center;
+  gap: 1.1rem;
+  min-height: 525px;
+  padding-top: 1.4rem;
 }
 
 .hero-copy h1,
@@ -197,7 +154,7 @@ img {
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.2rem, 8.5vw, 7.1rem);
+  font-size: clamp(2.9rem, 7.2vw, 6rem);
 }
 
 .hero-copy h1 span {
@@ -215,25 +172,6 @@ img {
   line-height: 1.6;
 }
 
-.wireframe-panel {
-  display: grid;
-  gap: 1rem;
-  padding: 1.25rem;
-}
-
-.wireframe-panel h2 {
-  margin: 0;
-  font-family: "Fraunces", serif;
-  font-size: 1.6rem;
-}
-
-.wireframe-note {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.timeline-strip,
 .mini-timeline {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +179,6 @@ img {
   padding: 0.5rem 0 1.25rem;
 }
 
-.timeline-strip a,
 .mini-timeline a {
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--line);
@@ -251,39 +188,63 @@ img {
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 
-.timeline-strip a:hover,
 .mini-timeline a:hover,
 .site-nav a:hover {
   color: var(--ink);
 }
 
-.timeline-strip a:hover,
 .mini-timeline a:hover {
   border-color: #9d9484;
   background: #f5f0e6;
 }
 
+.year-rail {
+  position: fixed;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  justify-items: center;
+  width: max-content;
+  padding: 0;
+}
+
+.year-rail__home {
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.year-rail a {
+  color: var(--muted);
+}
+
 .year-sections {
   display: grid;
-  gap: 1rem;
-  padding: 0 0 3.2rem;
+  gap: var(--edge-gap);
+  padding: var(--edge-gap) 0 3.2rem;
 }
 
 .year-card {
   display: grid;
-  grid-template-columns: minmax(240px, 0.95fr) minmax(280px, 1.3fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
   gap: 1rem;
-  padding: 1rem;
+  min-height: calc(100vh - var(--edge-gap) - var(--edge-gap));
+  padding: 1.4rem;
+  scroll-margin-top: var(--edge-gap);
 }
 
 .year-card__media {
-  min-height: 220px;
+  min-height: 100%;
   border: 1px dashed #aa9f8d;
   border-radius: var(--radius-md);
   background:
     linear-gradient(180deg, rgba(221, 232, 224, 0.7), rgba(255, 255, 255, 0.95)),
     repeating-linear-gradient(
-      45deg,
+      135deg,
       rgba(50, 92, 70, 0.05) 0,
       rgba(50, 92, 70, 0.05) 12px,
       transparent 12px,
@@ -298,7 +259,12 @@ img {
 
 .year-card__content {
   display: grid;
-  gap: 0.75rem;
+  align-content: end;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  align-self: end;
+  justify-self: end;
+  width: min(100%, 320px);
 }
 
 .year-card__content h2 {
@@ -309,7 +275,7 @@ img {
 
 .year-card__meta {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.75rem;
 }
 
 .year-card__meta p {
@@ -338,9 +304,24 @@ img {
   font-size: 1.1rem;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+  padding: 1.6rem 0 3rem;
+}
+
+.about-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .site-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   padding: 0 0 2rem;
   color: var(--muted);
@@ -365,6 +346,15 @@ img {
 .champions-intro h1 {
   font-size: clamp(2.4rem, 5vw, 4.1rem);
   margin-bottom: 1rem;
+}
+
+.page-panel h2 {
+  margin: 0 0 1rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 .page-panel {
@@ -531,10 +521,25 @@ img {
 @media (max-width: 980px) {
   .hero-home,
   .year-card,
+  .about-grid,
   .hosts-intro,
   .hosts-grid,
   .champions-intro {
     grid-template-columns: 1fr;
+  }
+
+  .year-rail {
+    position: static;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(10, auto);
+    justify-items: start;
+    justify-content: start;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .year-rail p {
+    margin: 0;
   }
 
   .side-index {
@@ -563,9 +568,9 @@ img {
   .site-header,
   .site-footer,
   .hero,
-  .timeline-strip,
   .year-sections,
   .page-shell,
+  .about-grid,
   .champions-layout,
   .hosts-layout {
     width: min(calc(100% - 1.4rem), var(--content-width));
