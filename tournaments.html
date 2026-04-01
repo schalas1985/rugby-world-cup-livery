@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+      <script src="tournament-selector.js" defer></script>
   </head>
   <body class="page-tournaments">
 <header class="site-header">
@@ -22,7 +23,7 @@
   <nav class="site-nav" aria-label="Primary">
     <a href="index.html">home</a>
     <a href="champions.html">champions</a>
-    <a href="tournaments.html#year-selector" aria-current="page">tournaments</a>
+    <a href="tournaments.html" aria-current="page">tournaments</a>
     <a href="predictor.html">predictor</a>
         <a href="teams.html">teams</a>
     <a href="about.html">about</a>
@@ -32,29 +33,20 @@
     <main class="tournaments-layout">
       <section class="tournament-hub-hero">
         <div class="tournament-hub-hero__placeholder">
-          <div class="tournament-hub-hero__art" aria-hidden="true">
-            <img src="assets/tournaments/tournament - 1987.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 1991.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 1995.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 1999.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2003.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2007.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2011.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2015.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2019.jpg" alt="" />
-            <img src="assets/tournaments/tournament - 2023.jpg" alt="" />
+          <div class="tournament-hub-hero__poster" aria-hidden="true">
+            <span>tournaments hero placeholder</span>
           </div>
           <div class="tournament-hub-hero__copy">
             <h1>tournaments</h1>
             <p>A tournament-by-tournament way into the Rugby World Cup archive, starting with the summary table below and then opening into each year.</p>
-            <p>The hero is now using the official tournament artwork as a first wireframe idea so we can explore how much identity each year should carry before the deeper archive sections begin.</p>
+            <p>Use the selector below to move through each tournament page. The year artwork now lives inside its matching year page so we can test how each tournament identity should sit inside the archive.</p>
           </div>
         </div>
 <aside class="tournament-hub-hero__nav" aria-label="Tournament navigation">
   <div class="tournament-hero__selector" id="year-selector">
     <span class="tournament-hero__arrow is-disabled" aria-hidden="true">&larr;</span>
     <span class="tournament-hero__year-pill is-current" aria-current="page">home</span>
-    <a class="tournament-hero__arrow" href="tournaments-1987.html#year-selector" aria-label="Go to 1987">&rarr;</a>
+    <a class="tournament-hero__arrow" href="tournaments-1987.html" aria-label="Go to 1987">&rarr;</a>
   </div>
 </aside>
       </section>
