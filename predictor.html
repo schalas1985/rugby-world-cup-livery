@@ -6,7 +6,7 @@
     <title>Predictor | Rugby World Cup Livery</title>
     <meta
       name="description"
-      content="A wireframe for a Rugby World Cup predictor where users can choose match winners, bonus points, and knockout paths."
+      content="A wireframe predictor for Rugby World Cup pool matches and knockout paths."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="predictor.js" defer></script>
   </head>
   <body class="page-predictor">
     <header class="site-header">
@@ -32,164 +33,245 @@
     <main class="predictor-layout">
       <section class="predictor-hero">
         <h1>predictor</h1>
-        <p>This is the first wireframe for the predictor game. The idea is that a user can pick winners, assign scores, choose bonus points, and then watch the pools and knockout bracket update automatically.</p>
-        <p>For now this page is about structure only: interactive inputs, pool cards, and a knockout board that we can gradually connect to the real tournament rules.</p>
+        <p>This is the working wireframe for the predictor game. The pool tab is focused on choosing winners and bonus-point conditions, while the knockout tab gives us the bracket structure we can wire up later.</p>
       </section>
 
-      <section class="predictor-pools">
-        <h2>Pool Matches</h2>
-        <div class="predictor-pools__grid">
-          <article class="predictor-pool-card">
-            <h2>Pool A</h2>
-            <p>Sample fixtures for testing winner selection, points difference, try bonus points, and losing bonus points.</p>
-            <form class="predictor-match-form">
-              <div class="predictor-match-form__teams">
-                <select aria-label="Home team">
-                  <option>New Zealand</option>
-                  <option>Australia</option>
-                  <option>Chile</option>
-                  <option>Hong Kong</option>
-                </select>
-                <select aria-label="Away team">
-                  <option>Australia</option>
-                  <option>New Zealand</option>
-                  <option>Chile</option>
-                  <option>Hong Kong</option>
-                </select>
-              </div>
-              <div class="predictor-match-form__meta">
-                <input type="number" placeholder="home score" />
-                <input type="number" placeholder="away score" />
-              </div>
-              <div class="predictor-match-form__toggles">
-                <label><input type="checkbox" /> home try bonus</label>
-                <label><input type="checkbox" /> away try bonus</label>
-                <label><input type="checkbox" /> losing bonus</label>
-              </div>
-            </form>
-            <form class="predictor-match-form">
-              <div class="predictor-match-form__teams">
-                <select aria-label="Home team">
-                  <option>Chile</option>
-                  <option>New Zealand</option>
-                  <option>Australia</option>
-                  <option>Hong Kong</option>
-                </select>
-                <select aria-label="Away team">
-                  <option>Hong Kong</option>
-                  <option>Chile</option>
-                  <option>New Zealand</option>
-                  <option>Australia</option>
-                </select>
-              </div>
-              <div class="predictor-match-form__meta">
-                <input type="number" placeholder="home score" />
-                <input type="number" placeholder="away score" />
-              </div>
-              <div class="predictor-match-form__toggles">
-                <label><input type="checkbox" /> home try bonus</label>
-                <label><input type="checkbox" /> away try bonus</label>
-                <label><input type="checkbox" /> losing bonus</label>
-              </div>
-            </form>
-          </article>
-
-          <article class="predictor-pool-card">
-            <h2>Pool B</h2>
-            <p>Wireframe placeholder for the rest of the pool-stage prediction controls and live table logic.</p>
-            <form class="predictor-match-form">
-              <div class="predictor-match-form__teams">
-                <select aria-label="Home team">
-                  <option>South Africa</option>
-                  <option>Italy</option>
-                  <option>Georgia</option>
-                  <option>Romania</option>
-                </select>
-                <select aria-label="Away team">
-                  <option>Italy</option>
-                  <option>South Africa</option>
-                  <option>Georgia</option>
-                  <option>Romania</option>
-                </select>
-              </div>
-              <div class="predictor-match-form__meta">
-                <input type="number" placeholder="home score" />
-                <input type="number" placeholder="away score" />
-              </div>
-              <div class="predictor-match-form__toggles">
-                <label><input type="checkbox" /> home try bonus</label>
-                <label><input type="checkbox" /> away try bonus</label>
-                <label><input type="checkbox" /> losing bonus</label>
-              </div>
-            </form>
-          </article>
-
-          <article class="predictor-pool-card">
-            <h2>Pool C</h2>
-            <p>Another pool card so we can judge spacing, readability, and how much room the controls need before the full predictor is wired up.</p>
-            <form class="predictor-match-form">
-              <div class="predictor-match-form__teams">
-                <select aria-label="Home team">
-                  <option>Argentina</option>
-                  <option>Fiji</option>
-                  <option>Spain</option>
-                  <option>Canada</option>
-                </select>
-                <select aria-label="Away team">
-                  <option>Fiji</option>
-                  <option>Argentina</option>
-                  <option>Spain</option>
-                  <option>Canada</option>
-                </select>
-              </div>
-              <div class="predictor-match-form__meta">
-                <input type="number" placeholder="home score" />
-                <input type="number" placeholder="away score" />
-              </div>
-              <div class="predictor-match-form__toggles">
-                <label><input type="checkbox" /> home try bonus</label>
-                <label><input type="checkbox" /> away try bonus</label>
-                <label><input type="checkbox" /> losing bonus</label>
-              </div>
-            </form>
-          </article>
+      <section class="predictor-tabs" aria-label="Predictor sections">
+        <div class="predictor-tabs__bar" role="tablist" aria-label="Predictor views">
+          <button class="predictor-tabs__button is-active" type="button" role="tab" aria-selected="true" aria-controls="predictor-pools-panel" id="predictor-pools-tab" data-target="predictor-pools-panel">pool matches</button>
+          <button class="predictor-tabs__button" type="button" role="tab" aria-selected="false" aria-controls="predictor-knockout-panel" id="predictor-knockout-tab" data-target="predictor-knockout-panel">knockout predictor</button>
         </div>
-      </section>
 
-      <section class="predictor-board">
-        <h2>Knockout Path</h2>
-        <div class="predictor-board__grid">
-          <div class="predictor-column">
-            <div class="predictor-slot">round of 16 slot 1</div>
-            <div class="predictor-slot">round of 16 slot 2</div>
-            <div class="predictor-slot">round of 16 slot 3</div>
-            <div class="predictor-slot">round of 16 slot 4</div>
-          </div>
-          <div class="predictor-column">
-            <div class="predictor-slot">quarter-final 1</div>
-            <div class="predictor-slot">quarter-final 2</div>
-            <div class="predictor-slot">quarter-final 3</div>
-            <div class="predictor-slot">quarter-final 4</div>
-          </div>
-          <div class="predictor-column">
-            <div class="predictor-slot">semi-final 1</div>
-            <div class="predictor-slot">semi-final 2</div>
-            <div class="predictor-slot">final</div>
-            <div class="predictor-slot">bronze final</div>
-          </div>
-          <div class="predictor-column">
-            <div class="predictor-slot">quarter-final 5</div>
-            <div class="predictor-slot">quarter-final 6</div>
-            <div class="predictor-slot">quarter-final 7</div>
-            <div class="predictor-slot">quarter-final 8</div>
-          </div>
-          <div class="predictor-column">
-            <div class="predictor-slot">round of 16 slot 5</div>
-            <div class="predictor-slot">round of 16 slot 6</div>
-            <div class="predictor-slot">round of 16 slot 7</div>
-            <div class="predictor-slot">round of 16 slot 8</div>
-          </div>
-        </div>
+        <section class="predictor-panel is-active" id="predictor-pools-panel" role="tabpanel" aria-labelledby="predictor-pools-tab">
+          <section class="predictor-overview">
+            <h2>Pool stage</h2>
+            <div class="predictor-overview__grid">
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool A</p></div>
+                <ul>
+                  <li>New Zealand</li>
+                  <li>Australia</li>
+                  <li>Chile</li>
+                  <li>Hong Kong China</li>
+                </ul>
+              </article>
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool B</p></div>
+                <ul>
+                  <li>South Africa</li>
+                  <li>Italy</li>
+                  <li>Georgia</li>
+                  <li>Romania</li>
+                </ul>
+              </article>
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool C</p></div>
+                <ul>
+                  <li>Argentina</li>
+                  <li>Fiji</li>
+                  <li>Spain</li>
+                  <li>Canada</li>
+                </ul>
+              </article>
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool D</p></div>
+                <ul>
+                  <li>Ireland</li>
+                  <li>Scotland</li>
+                  <li>Uruguay</li>
+                  <li>Portugal</li>
+                </ul>
+              </article>
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool E</p></div>
+                <ul>
+                  <li>France</li>
+                  <li>Japan</li>
+                  <li>USA</li>
+                  <li>Samoa</li>
+                </ul>
+              </article>
+              <article class="predictor-pool-card">
+                <div class="predictor-pool-card__head"><p>Pool F</p></div>
+                <ul>
+                  <li>England</li>
+                  <li>Wales</li>
+                  <li>Tonga</li>
+                  <li>Zimbabwe</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="predictor-fixtures">
+            <h2>Fixtures</h2>
+            <div class="predictor-fixtures__grid">
+              <article class="predictor-fixture-group">
+                <h3>Pool A</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>New Zealand</span><span>Australia</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>New Zealand</option><option>Australia</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> New Zealand 4+ tries</label>
+                      <label><input type="checkbox" /> Australia 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>Chile</span><span>Hong Kong China</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>Chile</option><option>Hong Kong China</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> Chile 4+ tries</label>
+                      <label><input type="checkbox" /> Hong Kong China 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>New Zealand</span><span>Chile</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>New Zealand</option><option>Chile</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> New Zealand 4+ tries</label>
+                      <label><input type="checkbox" /> Chile 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>Australia</span><span>Hong Kong China</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>Australia</option><option>Hong Kong China</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> Australia 4+ tries</label>
+                      <label><input type="checkbox" /> Hong Kong China 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>New Zealand</span><span>Hong Kong China</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>New Zealand</option><option>Hong Kong China</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> New Zealand 4+ tries</label>
+                      <label><input type="checkbox" /> Hong Kong China 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                  <form class="predictor-fixture">
+                    <div class="predictor-fixture__teams"><span>Australia</span><span>Chile</span></div>
+                    <div class="predictor-fixture__controls">
+                      <label>winner<select><option>select winner</option><option>Australia</option><option>Chile</option></select></label>
+                      <label><input type="checkbox" /> winner with bonus point</label>
+                      <label><input type="checkbox" /> Australia 4+ tries</label>
+                      <label><input type="checkbox" /> Chile 4+ tries</label>
+                      <label><input type="checkbox" /> loser within 7</label>
+                    </div>
+                  </form>
+                </div>
+              </article>
+
+              <article class="predictor-fixture-group">
+                <h3>Pool B</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>South Africa</span><span>Italy</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>South Africa</option><option>Italy</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> South Africa 4+ tries</label><label><input type="checkbox" /> Italy 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Georgia</span><span>Romania</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Georgia</option><option>Romania</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Georgia 4+ tries</label><label><input type="checkbox" /> Romania 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>South Africa</span><span>Georgia</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>South Africa</option><option>Georgia</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> South Africa 4+ tries</label><label><input type="checkbox" /> Georgia 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Italy</span><span>Romania</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Italy</option><option>Romania</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Italy 4+ tries</label><label><input type="checkbox" /> Romania 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>South Africa</span><span>Romania</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>South Africa</option><option>Romania</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> South Africa 4+ tries</label><label><input type="checkbox" /> Romania 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Italy</span><span>Georgia</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Italy</option><option>Georgia</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Italy 4+ tries</label><label><input type="checkbox" /> Georgia 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                </div>
+              </article>
+
+              <article class="predictor-fixture-group">
+                <h3>Pool C</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Argentina</span><span>Fiji</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Argentina</option><option>Fiji</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Argentina 4+ tries</label><label><input type="checkbox" /> Fiji 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Spain</span><span>Canada</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Spain</option><option>Canada</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Spain 4+ tries</label><label><input type="checkbox" /> Canada 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Argentina</span><span>Spain</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Argentina</option><option>Spain</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Argentina 4+ tries</label><label><input type="checkbox" /> Spain 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Fiji</span><span>Canada</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Fiji</option><option>Canada</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Fiji 4+ tries</label><label><input type="checkbox" /> Canada 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Argentina</span><span>Canada</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Argentina</option><option>Canada</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Argentina 4+ tries</label><label><input type="checkbox" /> Canada 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Fiji</span><span>Spain</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Fiji</option><option>Spain</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Fiji 4+ tries</label><label><input type="checkbox" /> Spain 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                </div>
+              </article>
+
+              <article class="predictor-fixture-group">
+                <h3>Pool D</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Ireland</span><span>Scotland</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Ireland</option><option>Scotland</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Ireland 4+ tries</label><label><input type="checkbox" /> Scotland 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Uruguay</span><span>Portugal</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Uruguay</option><option>Portugal</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Uruguay 4+ tries</label><label><input type="checkbox" /> Portugal 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Ireland</span><span>Uruguay</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Ireland</option><option>Uruguay</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Ireland 4+ tries</label><label><input type="checkbox" /> Uruguay 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Scotland</span><span>Portugal</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Scotland</option><option>Portugal</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Scotland 4+ tries</label><label><input type="checkbox" /> Portugal 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Ireland</span><span>Portugal</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Ireland</option><option>Portugal</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Ireland 4+ tries</label><label><input type="checkbox" /> Portugal 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Scotland</span><span>Uruguay</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Scotland</option><option>Uruguay</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Scotland 4+ tries</label><label><input type="checkbox" /> Uruguay 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                </div>
+              </article>
+
+              <article class="predictor-fixture-group">
+                <h3>Pool E</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>France</span><span>Japan</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>France</option><option>Japan</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> France 4+ tries</label><label><input type="checkbox" /> Japan 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>USA</span><span>Samoa</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>USA</option><option>Samoa</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> USA 4+ tries</label><label><input type="checkbox" /> Samoa 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>France</span><span>USA</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>France</option><option>USA</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> France 4+ tries</label><label><input type="checkbox" /> USA 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Japan</span><span>Samoa</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Japan</option><option>Samoa</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Japan 4+ tries</label><label><input type="checkbox" /> Samoa 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>France</span><span>Samoa</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>France</option><option>Samoa</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> France 4+ tries</label><label><input type="checkbox" /> Samoa 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Japan</span><span>USA</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Japan</option><option>USA</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Japan 4+ tries</label><label><input type="checkbox" /> USA 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                </div>
+              </article>
+
+              <article class="predictor-fixture-group">
+                <h3>Pool F</h3>
+                <div class="predictor-fixture-list">
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>England</span><span>Wales</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>England</option><option>Wales</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> England 4+ tries</label><label><input type="checkbox" /> Wales 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Tonga</span><span>Zimbabwe</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Tonga</option><option>Zimbabwe</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Tonga 4+ tries</label><label><input type="checkbox" /> Zimbabwe 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>England</span><span>Tonga</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>England</option><option>Tonga</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> England 4+ tries</label><label><input type="checkbox" /> Tonga 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Wales</span><span>Zimbabwe</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Wales</option><option>Zimbabwe</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Wales 4+ tries</label><label><input type="checkbox" /> Zimbabwe 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>England</span><span>Zimbabwe</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>England</option><option>Zimbabwe</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> England 4+ tries</label><label><input type="checkbox" /> Zimbabwe 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                  <form class="predictor-fixture"><div class="predictor-fixture__teams"><span>Wales</span><span>Tonga</span></div><div class="predictor-fixture__controls"><label>winner<select><option>select winner</option><option>Wales</option><option>Tonga</option></select></label><label><input type="checkbox" /> winner with bonus point</label><label><input type="checkbox" /> Wales 4+ tries</label><label><input type="checkbox" /> Tonga 4+ tries</label><label><input type="checkbox" /> loser within 7</label></div></form>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="predictor-panel" id="predictor-knockout-panel" role="tabpanel" aria-labelledby="predictor-knockout-tab" hidden>
+          <section class="predictor-board">
+            <h2>Knockout predictor</h2>
+            <div class="predictor-board__grid">
+              <div class="predictor-column">
+                <div class="predictor-slot">round of 16 1</div>
+                <div class="predictor-slot">round of 16 2</div>
+                <div class="predictor-slot">round of 16 3</div>
+                <div class="predictor-slot">round of 16 4</div>
+              </div>
+              <div class="predictor-column">
+                <div class="predictor-slot">quarter-final 1</div>
+                <div class="predictor-slot">quarter-final 2</div>
+                <div class="predictor-slot">quarter-final 3</div>
+                <div class="predictor-slot">quarter-final 4</div>
+              </div>
+              <div class="predictor-column">
+                <div class="predictor-slot">semi-final 1</div>
+                <div class="predictor-slot">semi-final 2</div>
+                <div class="predictor-slot predictor-slot--final">final</div>
+                <div class="predictor-slot predictor-slot--bronze">bronze final</div>
+              </div>
+              <div class="predictor-column">
+                <div class="predictor-slot">quarter-final 5</div>
+                <div class="predictor-slot">quarter-final 6</div>
+                <div class="predictor-slot">quarter-final 7</div>
+                <div class="predictor-slot">quarter-final 8</div>
+              </div>
+              <div class="predictor-column">
+                <div class="predictor-slot">round of 16 5</div>
+                <div class="predictor-slot">round of 16 6</div>
+                <div class="predictor-slot">round of 16 7</div>
+                <div class="predictor-slot">round of 16 8</div>
+              </div>
+            </div>
+          </section>
+        </section>
       </section>
     </main>
 
