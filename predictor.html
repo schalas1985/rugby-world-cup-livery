@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictor | Rugby World Cup Livery</title>
+    <meta
+      name="description"
+      content="A wireframe for a Rugby World Cup predictor where users can choose match winners, bonus points, and knockout paths."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-predictor">
+    <header class="site-header">
+      <p class="site-title">a rugby world cup livery</p>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">home</a>
+        <a href="champions.html">champions</a>
+        <a href="tournaments.html">tournaments</a>
+        <a href="predictor.html" aria-current="page">predictor</a>
+        <a href="teams.html">teams</a>
+        <a href="about.html">about</a>
+      </nav>
+    </header>
+
+    <main class="predictor-layout">
+      <section class="predictor-hero">
+        <h1>predictor</h1>
+        <p>This is the first wireframe for the predictor game. The idea is that a user can pick winners, assign scores, choose bonus points, and then watch the pools and knockout bracket update automatically.</p>
+        <p>For now this page is about structure only: interactive inputs, pool cards, and a knockout board that we can gradually connect to the real tournament rules.</p>
+      </section>
+
+      <section class="predictor-pools">
+        <h2>Pool Matches</h2>
+        <div class="predictor-pools__grid">
+          <article class="predictor-pool-card">
+            <h2>Pool A</h2>
+            <p>Sample fixtures for testing winner selection, points difference, try bonus points, and losing bonus points.</p>
+            <form class="predictor-match-form">
+              <div class="predictor-match-form__teams">
+                <select aria-label="Home team">
+                  <option>New Zealand</option>
+                  <option>Australia</option>
+                  <option>Chile</option>
+                  <option>Hong Kong</option>
+                </select>
+                <select aria-label="Away team">
+                  <option>Australia</option>
+                  <option>New Zealand</option>
+                  <option>Chile</option>
+                  <option>Hong Kong</option>
+                </select>
+              </div>
+              <div class="predictor-match-form__meta">
+                <input type="number" placeholder="home score" />
+                <input type="number" placeholder="away score" />
+              </div>
+              <div class="predictor-match-form__toggles">
+                <label><input type="checkbox" /> home try bonus</label>
+                <label><input type="checkbox" /> away try bonus</label>
+                <label><input type="checkbox" /> losing bonus</label>
+              </div>
+            </form>
+            <form class="predictor-match-form">
+              <div class="predictor-match-form__teams">
+                <select aria-label="Home team">
+                  <option>Chile</option>
+                  <option>New Zealand</option>
+                  <option>Australia</option>
+                  <option>Hong Kong</option>
+                </select>
+                <select aria-label="Away team">
+                  <option>Hong Kong</option>
+                  <option>Chile</option>
+                  <option>New Zealand</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+              <div class="predictor-match-form__meta">
+                <input type="number" placeholder="home score" />
+                <input type="number" placeholder="away score" />
+              </div>
+              <div class="predictor-match-form__toggles">
+                <label><input type="checkbox" /> home try bonus</label>
+                <label><input type="checkbox" /> away try bonus</label>
+                <label><input type="checkbox" /> losing bonus</label>
+              </div>
+            </form>
+          </article>
+
+          <article class="predictor-pool-card">
+            <h2>Pool B</h2>
+            <p>Wireframe placeholder for the rest of the pool-stage prediction controls and live table logic.</p>
+            <form class="predictor-match-form">
+              <div class="predictor-match-form__teams">
+                <select aria-label="Home team">
+                  <option>South Africa</option>
+                  <option>Italy</option>
+                  <option>Georgia</option>
+                  <option>Romania</option>
+                </select>
+                <select aria-label="Away team">
+                  <option>Italy</option>
+                  <option>South Africa</option>
+                  <option>Georgia</option>
+                  <option>Romania</option>
+                </select>
+              </div>
+              <div class="predictor-match-form__meta">
+                <input type="number" placeholder="home score" />
+                <input type="number" placeholder="away score" />
+              </div>
+              <div class="predictor-match-form__toggles">
+                <label><input type="checkbox" /> home try bonus</label>
+                <label><input type="checkbox" /> away try bonus</label>
+                <label><input type="checkbox" /> losing bonus</label>
+              </div>
+            </form>
+          </article>
+
+          <article class="predictor-pool-card">
+            <h2>Pool C</h2>
+            <p>Another pool card so we can judge spacing, readability, and how much room the controls need before the full predictor is wired up.</p>
+            <form class="predictor-match-form">
+              <div class="predictor-match-form__teams">
+                <select aria-label="Home team">
+                  <option>Argentina</option>
+                  <option>Fiji</option>
+                  <option>Spain</option>
+                  <option>Canada</option>
+                </select>
+                <select aria-label="Away team">
+                  <option>Fiji</option>
+                  <option>Argentina</option>
+                  <option>Spain</option>
+                  <option>Canada</option>
+                </select>
+              </div>
+              <div class="predictor-match-form__meta">
+                <input type="number" placeholder="home score" />
+                <input type="number" placeholder="away score" />
+              </div>
+              <div class="predictor-match-form__toggles">
+                <label><input type="checkbox" /> home try bonus</label>
+                <label><input type="checkbox" /> away try bonus</label>
+                <label><input type="checkbox" /> losing bonus</label>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="predictor-board">
+        <h2>Knockout Path</h2>
+        <div class="predictor-board__grid">
+          <div class="predictor-column">
+            <div class="predictor-slot">round of 16 slot 1</div>
+            <div class="predictor-slot">round of 16 slot 2</div>
+            <div class="predictor-slot">round of 16 slot 3</div>
+            <div class="predictor-slot">round of 16 slot 4</div>
+          </div>
+          <div class="predictor-column">
+            <div class="predictor-slot">quarter-final 1</div>
+            <div class="predictor-slot">quarter-final 2</div>
+            <div class="predictor-slot">quarter-final 3</div>
+            <div class="predictor-slot">quarter-final 4</div>
+          </div>
+          <div class="predictor-column">
+            <div class="predictor-slot">semi-final 1</div>
+            <div class="predictor-slot">semi-final 2</div>
+            <div class="predictor-slot">final</div>
+            <div class="predictor-slot">bronze final</div>
+          </div>
+          <div class="predictor-column">
+            <div class="predictor-slot">quarter-final 5</div>
+            <div class="predictor-slot">quarter-final 6</div>
+            <div class="predictor-slot">quarter-final 7</div>
+            <div class="predictor-slot">quarter-final 8</div>
+          </div>
+          <div class="predictor-column">
+            <div class="predictor-slot">round of 16 slot 5</div>
+            <div class="predictor-slot">round of 16 slot 6</div>
+            <div class="predictor-slot">round of 16 slot 7</div>
+            <div class="predictor-slot">round of 16 slot 8</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-title">a rugby world cup livery</p>
+    </footer>
+  </body>
+</html>
