@@ -738,6 +738,11 @@ img {
   padding: 2.8rem 0 0;
 }
 
+.champions-tribute__rows {
+  display: grid;
+  gap: 2rem;
+}
+
 .champions-tribute__intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -757,7 +762,7 @@ img {
 
 .champions-tribute__grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -978,6 +983,125 @@ img {
   margin-top: 7.5rem;
 }
 
+.page-tournaments .champions-summary-table {
+  margin-top: 2rem;
+}
+
+.champions-quarterfinal-band {
+  padding: 0.5rem 0 0;
+  display: grid;
+  justify-items: center;
+}
+
+.champions-quarterfinal-band__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 8.5rem));
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: start;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.champions-quarterfinal-band__item {
+  display: grid;
+  justify-items: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.champions-quarterfinal-band__item p {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.champions-quarterfinal-band__emblem {
+  width: min(100%, 72px);
+  height: auto;
+}
+
+.champions-quarterfinal-band__headline {
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #e3ddd2;
+  border-radius: 0.8rem;
+  background: #fffdf9;
+  text-align: left;
+}
+
+.champions-quarterfinal-band__headline strong {
+  display: inline-grid;
+  place-items: center;
+  min-height: 1.7rem;
+  border-radius: 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.champions-quarterfinal-band__headline span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.champions-attendance-band {
+  padding: 1rem 0 0;
+}
+
+.champions-attendance-band__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1.25rem 1rem;
+  align-items: start;
+}
+
+.champions-attendance-band__item {
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.champions-attendance-band__item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.champions-attendance-band__emblem {
+  width: 36px;
+  height: auto;
+}
+
+.champions-attendance-band__headline {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.38rem 0.55rem;
+  border: 1px solid #e3ddd2;
+  border-radius: 0.8rem;
+  background: #fffdf9;
+  text-align: left;
+}
+
+.champions-attendance-band__headline strong {
+  display: inline-grid;
+  place-items: center;
+  min-height: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.champions-attendance-band__headline span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .champions-summary-row {
   display: grid;
   grid-template-columns: 96px repeat(5, minmax(0, 1fr));
@@ -998,14 +1122,27 @@ img {
   text-transform: uppercase;
 }
 
-.tournament-hero {
+.tournament-hero,
+.tournament-hub-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 180px;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   padding: 0.6rem 0 0.2rem;
   background: none;
   border: none;
   border-radius: 0;
+  align-items: stretch;
+}
+
+.tournament-hub-hero__placeholder {
+  min-height: 210px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fffdf9;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  text-transform: lowercase;
 }
 
 .tournament-section h2 {
@@ -1027,24 +1164,67 @@ img {
   line-height: 1.55;
 }
 
-.tournament-hero__nav {
+.tournament-hero__nav,
+.tournament-hub-hero__nav {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-end;
-  justify-items: end;
-  text-align: right;
+  align-self: end;
 }
 
-.tournament-hero__switch {
+.tournament-hero__selector {
   display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.75rem;
   color: var(--ink);
 }
 
-.tournament-hero__host-line {
-  margin-top: 0.85rem;
-  text-transform: lowercase;
+.tournament-hero__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  flex: 0 0 auto;
+}
+
+.tournament-hero__arrow:hover {
+  color: var(--muted);
+}
+
+.tournament-hero__arrow.is-disabled {
+  opacity: 0.35;
+}
+
+.tournament-hero__year-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.5rem;
+  min-height: 3rem;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.tournament-hero__year-pill:hover {
+  color: var(--ink);
+  border-color: #9d9484;
+}
+
+.tournament-hero__year-pill.is-current {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--surface);
+  font-weight: 700;
 }
 
 .tournament-section {
@@ -1054,6 +1234,16 @@ img {
   background: none;
   border: none;
   border-radius: 0;
+}
+
+.tournament-kicker {
+  margin: 0;
+  justify-self: start;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .tournament-accolades {
@@ -1099,12 +1289,14 @@ img {
 .tournament-quarterfinals {
   display: grid;
   gap: 0.9rem;
+  justify-items: center;
 }
 
 .tournament-quarterfinals__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  gap: 4.5rem;
 }
 
 .tournament-quarterfinals__grid article {
@@ -1121,6 +1313,8 @@ img {
 
 .tournament-quarterfinals__grid span {
   color: var(--muted);
+  font-size: 1.35rem;
+  line-height: 1.08;
 }
 
 .tournament-pools {
@@ -1194,9 +1388,9 @@ img {
 
 .tournament-match {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) 76px minmax(0, 1fr);
+  grid-template-columns: 52px minmax(0, 1fr) 66px minmax(0, 1fr);
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
 }
 
 .tournament-match__meta {
@@ -1204,13 +1398,13 @@ img {
   justify-items: start;
   gap: 0.1rem;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   line-height: 1.2;
 }
 
 .tournament-match__meta strong {
   color: var(--ink);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
 }
 
 .tournament-match__team {
@@ -1228,19 +1422,22 @@ img {
 
 .tournament-match__team span {
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.35;
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
 
 .tournament-match__score {
   text-align: center;
   color: var(--ink);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 
 .tournament-section:last-child h2 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  text-align: left;
 }
 
 @keyframes float-ball {
@@ -1277,6 +1474,7 @@ img {
   .champions-intro,
   .champions-tribute__intro,
   .tournament-hero,
+  .tournament-hub-hero,
   .tournament-pools,
   .tournament-quarterfinals__grid {
     grid-template-columns: 1fr;
@@ -1329,6 +1527,8 @@ img {
   }
 
   .champions-tribute__grid,
+  .champions-attendance-band__grid,
+  .champions-quarterfinal-band__grid,
   .tournament-accolades {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1382,6 +1582,8 @@ img {
   }
 
   .champions-tribute__grid,
+  .champions-attendance-band__grid,
+  .champions-quarterfinal-band__grid,
   .tournament-accolades,
   .tournament-pools {
     grid-template-columns: 1fr;
