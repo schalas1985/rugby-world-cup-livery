@@ -380,6 +380,64 @@ img {
   gap: var(--page-gap);
 }
 
+.teams-landing-hero {
+  display: grid;
+  gap: 2.25rem;
+  padding: 1.6rem 0 0;
+}
+
+.teams-landing__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 1rem;
+}
+
+.teams-landing__item {
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  width: 8.25rem;
+  text-align: center;
+}
+
+.teams-landing__item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.teams-landing__emblem {
+  width: 36px;
+  height: auto;
+}
+
+.teams-landing__headline {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.38rem 0.55rem;
+  border: 1px solid #e3ddd2;
+  border-radius: 0.8rem;
+  background: #fffdf9;
+  text-align: left;
+}
+
+.teams-landing__headline strong {
+  display: inline-grid;
+  place-items: center;
+  min-height: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.teams-landing__headline span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .tournaments-layout,
 .champions-layout {
   display: grid;
@@ -505,7 +563,7 @@ img {
 }
 
 .team-select--inline {
-  justify-self: start;
+  justify-self: end;
 }
 
 .team-summary__eyebrow,
@@ -1049,13 +1107,17 @@ img {
 
 .champions-attendance-band {
   padding: 1rem 0 0;
+  display: grid;
+  justify-items: center;
 }
 
 .champions-attendance-band__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem 1rem;
   align-items: start;
+  max-width: 72rem;
 }
 
 .champions-attendance-band__item {
@@ -1063,6 +1125,7 @@ img {
   justify-items: center;
   gap: 0.45rem;
   text-align: center;
+  width: 8rem;
 }
 
 .champions-attendance-band__item p {
@@ -1126,16 +1189,18 @@ img {
 .tournament-hub-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
   gap: 1rem;
-  padding: 0.6rem 0 0.2rem;
+  padding: 0.8rem 0 0.2rem;
   background: none;
   border: none;
   border-radius: 0;
   align-items: stretch;
+  min-height: 30rem;
 }
 
 .tournament-hub-hero__placeholder {
-  min-height: 210px;
+  min-height: 22rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: #fffdf9;
@@ -1169,7 +1234,7 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  align-self: end;
+  padding-bottom: 0.4rem;
 }
 
 .tournament-hero__selector {

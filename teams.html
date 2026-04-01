@@ -6,7 +6,7 @@
     <title>Teams | Rugby World Cup Livery</title>
     <meta
       name="description"
-      content="Team profiles for Rugby World Cup Livery, beginning with South Africa as the first build."
+      content="Team profiles for Rugby World Cup Livery, with a landing page linking into each national team page."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,199 +16,157 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-teams" id="teams-top">
-    <header class="site-header">
-      <p class="site-title">a rugby world cup livery</p>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">home</a>
-        <a href="champions.html">champions</a>
-        <a href="tournaments.html">tournaments</a>
-        <a href="teams.html" aria-current="page">teams</a>
-        <a href="about.html">about</a>
-      </nav>
-    </header>
+  <body class="page-teams">
+<header class="site-header">
+  <p class="site-title">a rugby world cup livery</p>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">home</a>
+    <a href="champions.html">champions</a>
+    <a href="tournaments.html">tournaments</a>
+    <a href="teams.html" aria-current="page">teams</a>
+    <a href="about.html">about</a>
+  </nav>
+</header>
 
     <main class="teams-layout">
-      <section id="south-africa" class="team-hero">
-        <article class="team-summary">
-          <h1 id="team-name">South Africa</h1>
-          <p id="team-nickname" class="team-summary__nickname">Springboks</p>
-          <select id="team-select" class="team-select team-select--inline" aria-label="Choose a team">
-            <option value="south-africa">South Africa</option>
-            <option value="argentina">Argentina</option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="chile">Chile</option>
-            <option value="cote-divoire">Cote d'Ivoire</option>
-            <option value="england">England</option>
-            <option value="fiji">Fiji</option>
-            <option value="france">France</option>
-            <option value="georgia">Georgia</option>
-            <option value="ireland">Ireland</option>
-            <option value="italy">Italy</option>
-            <option value="japan">Japan</option>
-            <option value="namibia">Namibia</option>
-            <option value="new-zealand">New Zealand</option>
-            <option value="portugal">Portugal</option>
-            <option value="romania">Romania</option>
-            <option value="samoa">Samoa</option>
-            <option value="scotland">Scotland</option>
-            <option value="spain">Spain</option>
-            <option value="tonga">Tonga</option>
-            <option value="uruguay">Uruguay</option>
-            <option value="usa">USA</option>
-            <option value="wales">Wales</option>
-            <option value="zimbabwe">Zimbabwe</option>
-          </select>
-          <p id="team-summary-text" class="team-summary__text">
-            Identity, honours, Rugby World Cup results, and matchup history in one place.
-          </p>
-
-          <div id="team-accolades" class="team-accolades">
-            <article class="team-accolade">
-              <p>Best finish</p>
-              <strong>Winner</strong>
-              <span>1995, 2007, 2019, 2023</span>
-            </article>
-            <article class="team-accolade">
-              <p>Other accolades</p>
-              <strong>0 runner-up / 2 bronze</strong>
-              <span>2 quarter-finals, 0 pool-stage exits, 2 DNP</span>
-            </article>
-            <article class="team-accolade">
-              <p>Appearances</p>
-              <strong>8</strong>
-              <span>1995 to 2023</span>
-            </article>
+      <section class="teams-landing-hero">
+        <div class="champions-tribute__intro">
+          <div>
+            <p>
+              A starting point for every Rugby World Cup nation in the archive. Choose a country to open its team page and then move between profiles with the selector inside each page.
+            </p>
           </div>
-        </article>
+        </div>
 
-        <div id="team-visual-stack" class="team-visual-stack">
-          <article class="team-card team-card--jersey" aria-label="South Africa jersey concept">
-            <div class="team-jersey">
-              <div class="team-jersey__body"></div>
-              <div class="team-jersey__collar"></div>
-              <div class="team-jersey__sleeve team-jersey__sleeve--left"></div>
-              <div class="team-jersey__sleeve team-jersey__sleeve--right"></div>
-            </div>
-          </article>
+        <div class="teams-landing__grid" aria-label="Team archive links">
+<a class="teams-landing__item" href="teams-argentina.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Argentina</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-australia.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Australia</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-canada.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Canada</p>
+  <div class="teams-landing__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-chile.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Chile</p>
+  <div class="teams-landing__headline stat-quarter"><strong>1</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-cote-divoire.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Cote d&#39;Ivoire</p>
+  <div class="teams-landing__headline stat-quarter"><strong>1</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-england.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>England</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-fiji.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Fiji</p>
+  <div class="teams-landing__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-france.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>France</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-georgia.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Georgia</p>
+  <div class="teams-landing__headline stat-quarter"><strong>6</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-ireland.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Ireland</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-italy.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Italy</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-japan.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Japan</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-namibia.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Namibia</p>
+  <div class="teams-landing__headline stat-quarter"><strong>7</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-new-zealand.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>New Zealand</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-portugal.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Portugal</p>
+  <div class="teams-landing__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-romania.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Romania</p>
+  <div class="teams-landing__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-samoa.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Samoa</p>
+  <div class="teams-landing__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-scotland.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Scotland</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-south-africa.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>South Africa</p>
+  <div class="teams-landing__headline stat-quarter"><strong>8</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-spain.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Spain</p>
+  <div class="teams-landing__headline stat-quarter"><strong>1</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-tonga.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Tonga</p>
+  <div class="teams-landing__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-uruguay.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Uruguay</p>
+  <div class="teams-landing__headline stat-quarter"><strong>5</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-usa.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>USA</p>
+  <div class="teams-landing__headline stat-quarter"><strong>8</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-wales.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Wales</p>
+  <div class="teams-landing__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
+</a>
+<a class="teams-landing__item" href="teams-zimbabwe.html">
+  <img class="teams-landing__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
+  <p>Zimbabwe</p>
+  <div class="teams-landing__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
+</a>
         </div>
       </section>
-
-      <section class="team-detail-grid team-detail-grid--single">
-        <article class="team-panel">
-          <p class="team-card__label">Tournament results</p>
-          <div class="team-timeline">
-            <article class="team-timeline__item"><strong>1987</strong><span class="team-award">DNP</span></article>
-            <article class="team-timeline__item"><strong>1991</strong><span class="team-award">DNP</span></article>
-            <article class="team-timeline__item"><strong>1995</strong><span class="team-award team-award--icon"></span><small>winner</small></article>
-            <article class="team-timeline__item"><strong>1999</strong><span class="team-award team-award--icon"></span><small>bronze</small></article>
-            <article class="team-timeline__item"><strong>2003</strong><span class="team-award">QF</span></article>
-            <article class="team-timeline__item"><strong>2007</strong><span class="team-award team-award--icon"></span><small>winner</small></article>
-            <article class="team-timeline__item"><strong>2011</strong><span class="team-award">QF</span></article>
-            <article class="team-timeline__item"><strong>2015</strong><span class="team-award team-award--icon"></span><small>bronze</small></article>
-            <article class="team-timeline__item"><strong>2019</strong><span class="team-award team-award--icon"></span><small>winner</small></article>
-            <article class="team-timeline__item"><strong>2023</strong><span class="team-award team-award--icon"></span><small>winner</small></article>
-          </div>
-        </article>
-      </section>
-
-      <section class="team-detail-grid team-detail-grid--single">
-        <article class="team-panel">
-          <p class="team-card__label">Head-to-head index</p>
-          <div class="opponent-accordion">
-            <details class="opponent-details" open>
-              <summary><span>new zealand</span><span>5 matches ▾</span></summary>
-              <div class="fixture-list fixture-list--compact">
-                <article class="fixture-row fixture-row--inline"><span>2023</span><span>final</span><span>South Africa 12-11 New Zealand</span><span>Saint-Denis, France</span></article>
-                <article class="fixture-row fixture-row--inline"><span>2019</span><span>pool stage</span><span>South Africa 13-23 New Zealand</span><span>Yokohama, Japan</span></article>
-                <article class="fixture-row fixture-row--inline"><span>2015</span><span>semi-final</span><span>South Africa 18-20 New Zealand</span><span>London, England</span></article>
-                <article class="fixture-row fixture-row--inline"><span>1999</span><span>bronze final</span><span>South Africa 22-18 New Zealand</span><span>Cardiff, Wales</span></article>
-                <article class="fixture-row fixture-row--inline"><span>1995</span><span>final</span><span>South Africa 15-12 New Zealand</span><span>Johannesburg, South Africa</span></article>
-              </div>
-            </details>
-            <details class="opponent-details"><summary><span>england</span><span>5 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>semi-final</span><span>South Africa 16-15 England</span><span>Saint-Denis, France</span></article><article class="fixture-row fixture-row--inline"><span>2019</span><span>final</span><span>South Africa 32-12 England</span><span>Yokohama, Japan</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>pool stage</span><span>South Africa 36-0 England</span><span>Saint-Denis, France</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>final</span><span>South Africa 15-6 England</span><span>Saint-Denis, France</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>quarter-final</span><span>South Africa 44-21 England</span><span>Paris, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>samoa</span><span>4 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2011</span><span>pool stage</span><span>South Africa 13-5 Samoa</span><span>Auckland, New Zealand</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>pool stage</span><span>South Africa 59-7 Samoa</span><span>Paris, France</span></article><article class="fixture-row fixture-row--inline"><span>2003</span><span>pool stage</span><span>South Africa 60-10 Samoa</span><span>Brisbane, Australia</span></article><article class="fixture-row fixture-row--inline"><span>1995</span><span>quarter-final</span><span>South Africa 42-14 Samoa</span><span>Johannesburg, South Africa</span></article></div></details>
-            <details class="opponent-details"><summary><span>wales</span><span>4 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2019</span><span>semi-final</span><span>South Africa 19-16 Wales</span><span>Yokohama, Japan</span></article><article class="fixture-row fixture-row--inline"><span>2015</span><span>quarter-final</span><span>South Africa 23-19 Wales</span><span>London, England</span></article><article class="fixture-row fixture-row--inline"><span>2011</span><span>semi-final</span><span>South Africa 16-17 Wales</span><span>Auckland, New Zealand</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>pool stage</span><span>South Africa 23-19 Wales</span><span>Cardiff, Wales</span></article></div></details>
-            <details class="opponent-details"><summary><span>australia</span><span>3 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2011</span><span>quarter-final</span><span>South Africa 9-11 Australia</span><span>Wellington, New Zealand</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>semi-final</span><span>South Africa 21-27 Australia</span><span>London, England</span></article><article class="fixture-row fixture-row--inline"><span>1995</span><span>pool stage</span><span>South Africa 27-18 Australia</span><span>Cape Town, South Africa</span></article></div></details>
-            <details class="opponent-details"><summary><span>scotland</span><span>3 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>pool stage</span><span>South Africa 18-3 Scotland</span><span>Marseille, France</span></article><article class="fixture-row fixture-row--inline"><span>2015</span><span>pool stage</span><span>South Africa 34-16 Scotland</span><span>Newcastle, England</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>pool stage</span><span>South Africa 46-29 Scotland</span><span>Edinburgh, Scotland</span></article></div></details>
-            <details class="opponent-details"><summary><span>argentina</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2015</span><span>bronze final</span><span>South Africa 24-13 Argentina</span><span>London, England</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>semi-final</span><span>South Africa 37-13 Argentina</span><span>Saint-Denis, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>canada</span><span>3 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2019</span><span>pool stage</span><span>South Africa 66-7 Canada</span><span>Kobe, Japan</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>pool stage</span><span>South Africa 46-13 Canada</span><span>Pretoria, South Africa</span></article><article class="fixture-row fixture-row--inline"><span>1995</span><span>pool stage</span><span>South Africa 20-0 Canada</span><span>Port Elizabeth, South Africa</span></article></div></details>
-            <details class="opponent-details"><summary><span>fiji</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2011</span><span>pool stage</span><span>South Africa 49-3 Fiji</span><span>Wellington, New Zealand</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>quarter-final</span><span>South Africa 37-20 Fiji</span><span>Marseille, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>france</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>quarter-final</span><span>South Africa 29-28 France</span><span>Saint-Denis, France</span></article><article class="fixture-row fixture-row--inline"><span>1995</span><span>semi-final</span><span>South Africa 19-15 France</span><span>Durban, South Africa</span></article></div></details>
-            <details class="opponent-details"><summary><span>japan</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2019</span><span>quarter-final</span><span>South Africa 26-3 Japan</span><span>Tokyo, Japan</span></article><article class="fixture-row fixture-row--inline"><span>2015</span><span>pool stage</span><span>South Africa 32-34 Japan</span><span>Brighton, England</span></article></div></details>
-            <details class="opponent-details"><summary><span>namibia</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2019</span><span>pool stage</span><span>South Africa 57-3 Namibia</span><span>Toyota, Japan</span></article><article class="fixture-row fixture-row--inline"><span>2011</span><span>pool stage</span><span>South Africa 87-0 Namibia</span><span>Auckland, New Zealand</span></article></div></details>
-            <details class="opponent-details"><summary><span>romania</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>pool stage</span><span>South Africa 76-0 Romania</span><span>Bordeaux, France</span></article><article class="fixture-row fixture-row--inline"><span>1995</span><span>pool stage</span><span>South Africa 21-8 Romania</span><span>Port Elizabeth, South Africa</span></article></div></details>
-            <details class="opponent-details"><summary><span>tonga</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>pool stage</span><span>South Africa 49-18 Tonga</span><span>Marseille, France</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>pool stage</span><span>South Africa 30-25 Tonga</span><span>Lens, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>uruguay</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2003</span><span>pool stage</span><span>South Africa 72-6 Uruguay</span><span>Perth, Australia</span></article><article class="fixture-row fixture-row--inline"><span>1999</span><span>pool stage</span><span>South Africa 39-3 Uruguay</span><span>Glasgow, Scotland</span></article></div></details>
-            <details class="opponent-details"><summary><span>usa</span><span>2 matches ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2015</span><span>pool stage</span><span>South Africa 64-0 USA</span><span>London, England</span></article><article class="fixture-row fixture-row--inline"><span>2007</span><span>pool stage</span><span>South Africa 64-15 USA</span><span>Montpellier, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>georgia</span><span>1 match ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2003</span><span>pool stage</span><span>South Africa 46-19 Georgia</span><span>Sydney, Australia</span></article></div></details>
-            <details class="opponent-details"><summary><span>ireland</span><span>1 match ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2023</span><span>pool stage</span><span>South Africa 8-13 Ireland</span><span>Saint-Denis, France</span></article></div></details>
-            <details class="opponent-details"><summary><span>italy</span><span>1 completed + 1 cancelled ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>2019</span><span>pool stage</span><span>South Africa 49-3 Italy</span><span>Shizuoka, Japan</span></article><article class="fixture-row fixture-row--inline"><span>2019</span><span>cancelled</span><span>South Africa v Italy</span><span>Kamaishi, Japan</span></article></div></details>
-            <details class="opponent-details"><summary><span>spain</span><span>1 match ▾</span></summary><div class="fixture-list fixture-list--compact"><article class="fixture-row fixture-row--inline"><span>1999</span><span>pool stage</span><span>South Africa 47-3 Spain</span><span>Edinburgh, Scotland</span></article></div></details>
-          </div>
-        </article>
-      </section>
-
-      <section id="team-coming-soon" class="team-placeholder-single" hidden>
-        <article class="team-panel">
-          <p class="team-card__label">coming soon</p>
-          <h2 id="team-coming-soon-title">This team page is still being built.</h2>
-          <p class="team-panel__intro">
-            South Africa is the first profile in progress. The rest of the team pages will follow this structure once their data and layout are filled in properly.
-          </p>
-        </article>
-      </section>
     </main>
-
-    <script>
-      const teamSelect = document.getElementById("team-select");
-      const teamName = document.getElementById("team-name");
-      const teamNickname = document.getElementById("team-nickname");
-      const teamSummaryText = document.getElementById("team-summary-text");
-      const teamAccolades = document.getElementById("team-accolades");
-      const teamVisualStack = document.getElementById("team-visual-stack");
-      const southAfricaSections = document.querySelectorAll(".team-detail-grid");
-      const comingSoonPanel = document.getElementById("team-coming-soon");
-      const comingSoonTitle = document.getElementById("team-coming-soon-title");
-
-      if (
-        teamSelect &&
-        teamName &&
-        teamNickname &&
-        teamSummaryText &&
-        teamAccolades &&
-        teamVisualStack &&
-        comingSoonPanel &&
-        comingSoonTitle
-      ) {
-        teamSelect.addEventListener("change", function () {
-          const selectedTeam = this.value;
-          const isSouthAfrica = selectedTeam === "south-africa";
-          const label = teamSelect.options[teamSelect.selectedIndex].text;
-
-          southAfricaSections.forEach(function (section) {
-            section.hidden = !isSouthAfrica;
-          });
-
-          teamName.textContent = label;
-          teamNickname.textContent = isSouthAfrica ? "Springboks" : "Coming soon";
-          teamSummaryText.textContent = isSouthAfrica
-            ? "Identity, honours, Rugby World Cup results, and matchup history in one place."
-            : "This team page is archived in the plan and will be built once the South Africa structure is settled.";
-          teamAccolades.hidden = !isSouthAfrica;
-          teamVisualStack.hidden = !isSouthAfrica;
-          comingSoonPanel.hidden = isSouthAfrica;
-
-          if (!isSouthAfrica) {
-            comingSoonTitle.textContent = label + " page coming soon.";
-            window.location.hash = "team-coming-soon";
-          } else {
-            window.location.hash = "south-africa";
-          }
-        });
-      }
-    </script>
 
     <footer class="site-footer">
       <p class="site-title">a rugby world cup livery</p>
