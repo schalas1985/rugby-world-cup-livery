@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+      <script src="tournament-selector.js" defer></script>
   </head>
   <body class="page-tournaments">
 <header class="site-header">
@@ -22,7 +23,7 @@
   <nav class="site-nav" aria-label="Primary">
     <a href="index.html">home</a>
     <a href="champions.html">champions</a>
-    <a href="tournaments.html#year-selector" aria-current="page">tournaments</a>
+    <a href="tournaments.html" aria-current="page">tournaments</a>
     <a href="predictor.html">predictor</a>
         <a href="teams.html">teams</a>
     <a href="about.html">about</a>
@@ -31,15 +32,18 @@
 
     <main class="tournaments-layout">
       <section class="tournament-hero">
+        <div class="tournament-hero__art">
+          <img class="tournament-hero__poster" src="assets/tournaments/tournament - 1987.jpg" alt="Rugby World Cup 1987 tournament artwork" />
+        </div>
         <div class="tournament-hero__meta">
           <p>The first Rugby World Cup, co-hosted by New Zealand and Australia. This page is the first tournament layout and can grow into a fuller interactive bracket, team paths, and match archive later.</p>
         </div>
 <aside class="tournament-hero__nav" aria-label="Tournament navigation">
   <div class="tournament-hero__selector" id="year-selector">
-    <a class="tournament-hero__home" href="tournaments.html#year-selector">home</a>
+    <a class="tournament-hero__home" href="tournaments.html">home</a>
     <span class="tournament-hero__arrow is-disabled" aria-hidden="true">&larr;</span>
-    <a class="tournament-hero__year-pill is-current" href="tournaments-1987.html#year-selector">1987</a>
-    <a class="tournament-hero__arrow" href="tournaments-1991.html#year-selector" aria-label="Go to 1991">&rarr;</a>
+    <a class="tournament-hero__year-pill is-current" href="tournaments-1987.html">1987</a>
+    <a class="tournament-hero__arrow" href="tournaments-1991.html" aria-label="Go to 1991">&rarr;</a>
   </div>
 </aside>
       </section>

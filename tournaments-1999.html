@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+      <script src="tournament-selector.js" defer></script>
   </head>
   <body class="page-tournaments">
 <header class="site-header">
@@ -22,7 +23,7 @@
   <nav class="site-nav" aria-label="Primary">
     <a href="index.html">home</a>
     <a href="champions.html">champions</a>
-    <a href="tournaments.html#year-selector" aria-current="page">tournaments</a>
+    <a href="tournaments.html" aria-current="page">tournaments</a>
     <a href="predictor.html">predictor</a>
         <a href="teams.html">teams</a>
     <a href="about.html">about</a>
@@ -31,15 +32,18 @@
 
     <main class="tournaments-layout">
       <section class="tournament-hero">
+        <div class="tournament-hero__art">
+          <img class="tournament-hero__poster" src="assets/tournaments/tournament - 1999.jpg" alt="Rugby World Cup 1999 tournament artwork" />
+        </div>
         <div class="tournament-hero__meta">
           <p>Hosted primarily in Wales, this page is the 1999 tournament layout and can grow into a fuller interactive bracket, team paths, and match archive later.</p>
         </div>
 <aside class="tournament-hero__nav" aria-label="Tournament navigation">
   <div class="tournament-hero__selector" id="year-selector">
-    <a class="tournament-hero__home" href="tournaments.html#year-selector">home</a>
-    <a class="tournament-hero__arrow" href="tournaments-1995.html#year-selector" aria-label="Go to 1995">&larr;</a>
-    <a class="tournament-hero__year-pill is-current" href="tournaments-1999.html#year-selector">1999</a>
-    <a class="tournament-hero__arrow" href="tournaments-2003.html#year-selector" aria-label="Go to 2003">&rarr;</a>
+    <a class="tournament-hero__home" href="tournaments.html">home</a>
+    <a class="tournament-hero__arrow" href="tournaments-1995.html" aria-label="Go to 1995">&larr;</a>
+    <a class="tournament-hero__year-pill is-current" href="tournaments-1999.html">1999</a>
+    <a class="tournament-hero__arrow" href="tournaments-2003.html" aria-label="Go to 2003">&rarr;</a>
   </div>
 </aside>
       </section>
