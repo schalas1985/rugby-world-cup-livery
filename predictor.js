@@ -18,3 +18,28 @@ predictorTabs.forEach((button) => {
     });
   });
 });
+
+const predictorFixtures = document.querySelectorAll(".predictor-fixture");
+
+predictorFixtures.forEach((fixture) => {
+  const winnerInputs = fixture.querySelectorAll(".predictor-winner-toggle input");
+  const pointSpans = fixture.querySelectorAll(".predictor-log-points span");
+
+  const syncPoints = () => {
+    pointSpans.forEach((span) => {
+      span.textContent = "0 log points";
+    });
+
+    winnerInputs.forEach((input, index) => {
+      if (input.checked && pointSpans[index]) {
+        pointSpans[index].textContent = "4 log points";
+      }
+    });
+  };
+
+  winnerInputs.forEach((input) => {
+    input.addEventListener("change", syncPoints);
+  });
+
+  syncPoints();
+});
