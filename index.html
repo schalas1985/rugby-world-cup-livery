@@ -19,13 +19,22 @@
   <body class="page-home" id="top">
     <header class="site-header">
       <p class="site-title">a rugby world cup livery</p>
-      <nav class="site-nav" aria-label="Primary">
+            <nav class="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">home</a>
         <a href="champions.html">champions</a>
         <a href="tournaments.html">tournaments</a>
-        <a href="predictor.html">predictor</a>
         <a href="teams.html">teams</a>
-        <a href="about.html">about</a>
+        <details class="site-nav__about">
+          <summary>about</summary>
+          <div class="site-nav__submenu" aria-label="Review pages">
+            <a href="about.html">about</a>
+            <a href="hosts.html">host nations</a>
+            <a href="participants.html">participant nations</a>
+            <a href="team-pages.html">team pages</a>
+            <a href="review.html">review pages</a>
+          </div>
+        </details>
+        <a class="site-nav__predictor" href="predictor.html">predictor</a>
       </nav>
     </header>
 
@@ -48,152 +57,75 @@
           </p>
         </div>
 
-        <aside class="year-rail" aria-label="Tournament year navigation">
-          <a class="year-rail__home" href="#top" aria-label="Back to top">&#8593;</a>
-          <a href="#year-1987">1987</a>
-          <a href="#year-1991">1991</a>
-          <a href="#year-1995">1995</a>
-          <a href="#year-1999">1999</a>
-          <a href="#year-2003">2003</a>
-          <a href="#year-2007">2007</a>
-          <a href="#year-2011">2011</a>
-          <a href="#year-2015">2015</a>
-          <a href="#year-2019">2019</a>
-          <a href="#year-2023">2023</a>
-          <a href="#year-2027">2027</a>
-        </aside>
       </section>
 
-      <section class="year-sections" aria-label="Tournament overview sections">
-        <article id="year-1987" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 1987 champions</div>
-          <div class="year-card__content">
-            <h2>1987</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> New Zealand / Australia</p>
-              <p><strong>Champions:</strong> New Zealand</p>
-            </div>
-            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+      <section class="history-drawer" aria-label="History of rugby">
+        <details class="history-drawer__details">
+          <summary>history of rugby <span>&#9662;</span></summary>
+          <div class="history-snake">
+            <article class="history-snake__item"><strong>1823</strong><p>Origin story placeholder for the sport's folklore and earliest school roots.</p></article>
+            <article class="history-snake__item"><strong>1871</strong><p>International rugby placeholder marking early union organisation and first test era.</p></article>
+            <article class="history-snake__item"><strong>1888</strong><p>Touring culture placeholder showing how rugby history became global and visible.</p></article>
+            <article class="history-snake__item"><strong>1905</strong><p>Iconic touring side placeholder for the game becoming part of national identity.</p></article>
+            <article class="history-snake__item"><strong>1987</strong><p>World Cup begins and the archive transitions from rugby history into tournament history.</p></article>
+          </div>
+        </details>
+      </section>
+
+      <section class="tournament-timeline" aria-label="Tournament history">
+        <div class="tournament-timeline__line" aria-hidden="true"></div>
+
+        <article class="tournament-timeline__item tournament-timeline__item--left">
+          <div class="tournament-timeline__media">1987 tournament poster / winning moment</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">1987</p>
+            <h2>First tournament, first archive marker</h2>
+            <p>The story begins with co-hosted foundations in New Zealand and Australia, and the tournament establishes the visible thread that runs through this whole site.</p>
           </div>
         </article>
 
-        <article id="year-1991" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 1991 champions</div>
-          <div class="year-card__content">
-            <h2>1991</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> England / France / Ireland / Scotland / Wales</p>
-              <p><strong>Champions:</strong> Australia</p>
-            </div>
-            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+        <article class="tournament-timeline__item tournament-timeline__item--right">
+          <div class="tournament-timeline__media">1991 tournament poster / final moment</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">1991</p>
+            <h2>The tournament grows across host nations</h2>
+            <p>A broader hosting footprint and stronger international shape start to make the World Cup feel like a recurring global event rather than a one-off launch.</p>
           </div>
         </article>
 
-        <article id="year-1995" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 1995 champions</div>
-          <div class="year-card__content">
-            <h2>1995</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> South Africa</p>
-              <p><strong>Champions:</strong> South Africa</p>
-            </div>
-            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+        <article class="tournament-timeline__item tournament-timeline__item--left">
+          <div class="tournament-timeline__media">1995 tournament poster / cultural moment</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">1995</p>
+            <h2>One of the defining editions</h2>
+            <p>The 1995 tournament stands as one of the most emotionally and culturally significant editions, and it becomes a key anchor point in the archive.</p>
           </div>
         </article>
 
-        <article id="year-1999" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 1999 champions</div>
-          <div class="year-card__content">
-            <h2>1999</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> Wales</p>
-              <p><strong>Champions:</strong> Australia</p>
-            </div>
-            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+        <article class="tournament-timeline__item tournament-timeline__item--right">
+          <div class="tournament-timeline__media">1999 tournament poster / expanded knockout drama</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">1999</p>
+            <h2>More pathways, more complexity</h2>
+            <p>By 1999 the format creates more routes through the knockout bracket, which is exactly the kind of structure this archive eventually wants to explain clearly.</p>
           </div>
         </article>
 
-        <article id="year-2003" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2003 champions</div>
-          <div class="year-card__content">
-            <h2>2003</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> Australia</p>
-              <p><strong>Champions:</strong> England</p>
-            </div>
-            <div class="flag-pill"><span>🏴</span> England flag placeholder</div>
+        <article class="tournament-timeline__item tournament-timeline__item--left">
+          <div class="tournament-timeline__media">2003 tournament poster / final memory</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">2003</p>
+            <h2>High-stakes era</h2>
+            <p>The early 2000s push the tournament further into the modern televised era, with memorable finals and stronger global familiarity.</p>
           </div>
         </article>
 
-        <article id="year-2007" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2007 champions</div>
-          <div class="year-card__content">
-            <h2>2007</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> France</p>
-              <p><strong>Champions:</strong> South Africa</p>
-            </div>
-            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
-          </div>
-        </article>
-
-        <article id="year-2011" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2011 champions</div>
-          <div class="year-card__content">
-            <h2>2011</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> New Zealand</p>
-              <p><strong>Champions:</strong> New Zealand</p>
-            </div>
-            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
-          </div>
-        </article>
-
-        <article id="year-2015" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2015 champions</div>
-          <div class="year-card__content">
-            <h2>2015</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> England</p>
-              <p><strong>Champions:</strong> New Zealand</p>
-            </div>
-            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
-          </div>
-        </article>
-
-        <article id="year-2019" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2019 champions</div>
-          <div class="year-card__content">
-            <h2>2019</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> Japan</p>
-              <p><strong>Champions:</strong> South Africa</p>
-            </div>
-            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
-          </div>
-        </article>
-
-        <article id="year-2023" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2023 champions</div>
-          <div class="year-card__content">
-            <h2>2023</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> France</p>
-              <p><strong>Champions:</strong> South Africa</p>
-            </div>
-            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
-          </div>
-        </article>
-
-        <article id="year-2027" class="year-card">
-          <div class="year-card__media year-card__media--full">Placeholder photo area for 2027 champions</div>
-          <div class="year-card__content">
-            <h2>2027</h2>
-            <div class="year-card__meta">
-              <p><strong>Hosts:</strong> Australia</p>
-              <p><strong>Champions:</strong> Placeholder</p>
-            </div>
-            <div class="flag-pill"><span>🏳️</span> Champion flag placeholder</div>
+        <article class="tournament-timeline__item tournament-timeline__item--right">
+          <div class="tournament-timeline__media">2007 to 2027 placeholders</div>
+          <div class="tournament-timeline__content">
+            <p class="tournament-timeline__year">2007 to 2027</p>
+            <h2>The archive keeps moving</h2>
+            <p>The remaining tournament editions can continue down this timeline, giving the homepage a clearer role: introduce the tournament story first, then let other pages handle deeper slices.</p>
           </div>
         </article>
       </section>
