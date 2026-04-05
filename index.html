@@ -18,7 +18,7 @@
   </head>
   <body class="page-home" id="top">
     <header class="site-header">
-      <p class="site-title">a rugby world cup livery</p>
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
             <nav class="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">home</a>
         <a href="champions.html">champions</a>
@@ -57,6 +57,12 @@
           </p>
         </div>
 
+        <a class="hero-scroll-cue" href="#tournament-history" aria-label="Scroll to tournament history">
+          <span class="hero-scroll-cue__mouse" aria-hidden="true">
+            <span class="hero-scroll-cue__wheel"></span>
+          </span>
+        </a>
+
       </section>
 
       <section class="history-drawer" aria-label="History of rugby">
@@ -72,7 +78,10 @@
         </details>
       </section>
 
-      <section class="tournament-timeline" aria-label="Tournament history">
+      <section class="tournament-timeline" id="tournament-history" aria-label="Tournament history">
+        <div class="tournament-timeline__heading">
+          <h2>History of the tournament</h2>
+        </div>
         <div class="tournament-timeline__line" aria-hidden="true"></div>
 
         <article class="tournament-timeline__item tournament-timeline__item--left">
@@ -132,7 +141,7 @@
     </main>
 
     <footer class="site-footer">
-      <p class="site-title">a rugby world cup livery</p>
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
     </footer>
   </body>
 </html>

@@ -86,11 +86,18 @@ img {
 
 .site-title {
   margin: 0;
+  display: inline-block;
   font-family: "Fraunces", serif;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.03em;
   text-transform: lowercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--ink);
 }
 
 .site-nav {
@@ -308,6 +315,7 @@ img {
 }
 
 .page-champions .hero,
+.page-champions .champions-gallery-hero,
 .page-champions .year-sections {
   width: min(
     calc(100vw - (var(--edge-gap) * 2) - var(--rail-width) - var(--rail-gap)),
@@ -319,6 +327,49 @@ img {
 
 .history-drawer {
   padding: 0 0 1rem;
+}
+
+.hero-scroll-cue {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: end;
+  display: inline-grid;
+  place-items: center;
+  padding-top: 1rem;
+  text-decoration: none;
+}
+
+.hero-scroll-cue__mouse {
+  position: relative;
+  display: inline-grid;
+  place-items: start center;
+  width: 2rem;
+  height: 3.1rem;
+  padding-top: 0.45rem;
+  border: 1px solid #d8cdb9;
+  border-radius: 999px;
+  background: rgba(255, 253, 249, 0.9);
+}
+
+.hero-scroll-cue__wheel {
+  width: 2px;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--muted);
+  animation: scroll-wheel 1.3s ease-in-out infinite;
+}
+
+@keyframes scroll-wheel {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(0.55rem);
+    opacity: 1;
+  }
 }
 
 .history-drawer__details {
@@ -375,7 +426,21 @@ img {
   position: relative;
   display: grid;
   gap: 2.2rem;
-  padding: 1rem 0 3.2rem;
+  padding: 2.4rem 0 3.2rem;
+}
+
+.tournament-timeline__heading {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 34rem);
+}
+
+.tournament-timeline__heading h2 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
 }
 
 .tournament-timeline__line {
@@ -647,6 +712,46 @@ img {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.champions-gallery-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  padding-top: 1rem;
+}
+
+.champions-gallery-hero__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  min-width: 0;
+}
+
+.champions-gallery-hero__item {
+  min-width: 0;
+}
+
+.champions-gallery-hero__media {
+  min-height: 37rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fffdf9;
+  color: var(--muted);
+  display: grid;
+  align-content: end;
+  text-align: left;
+  padding: 1.1rem;
+  box-sizing: border-box;
+}
+
+.champions-gallery-hero__media strong {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.65rem, 2.2vw, 2.35rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--ink);
 }
 
 .teams-landing__grid {
@@ -1579,6 +1684,47 @@ img {
   background: none;
 }
 
+.tournament-hub-hero__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  align-content: start;
+}
+
+.tournament-hub-hero__card {
+  display: grid;
+  gap: 0.65rem;
+  justify-items: center;
+}
+
+.tournament-hub-hero__logo {
+  width: 100%;
+  min-height: 8.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fffdf9;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.tournament-hub-hero__logo-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.tournament-hub-hero__card p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 500;
+}
+
 .tournament-hub-hero__poster,
 .tournament-hero__poster {
   width: 100%;
@@ -2390,6 +2536,7 @@ img {
   .year-card,
   .about-grid,
   .tournament-timeline__item,
+  .champions-gallery-hero,
   .team-hero,
   .champions-band,
   .team-visual-stack,
@@ -2429,9 +2576,19 @@ img {
   .page-home .hero,
   .page-home .year-sections,
   .page-champions .hero,
+  .page-champions .champions-gallery-hero,
   .page-champions .year-sections {
     width: min(calc(100% - 1.4rem), var(--content-width));
     margin-left: auto;
+  }
+
+  .champions-gallery-hero__grid,
+  .tournament-hub-hero__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .champions-gallery-hero__media {
+    min-height: 20rem;
   }
 
   .tournament-timeline__line {
