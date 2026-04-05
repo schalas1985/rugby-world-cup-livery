@@ -18,251 +18,194 @@
   </head>
   <body class="page-champions" id="champions-top">
     <header class="site-header">
-      <p class="site-title">a rugby world cup livery</p>
-      <nav class="site-nav" aria-label="Primary">
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
+            <nav class="site-nav" aria-label="Primary">
         <a href="index.html">home</a>
         <a href="champions.html" aria-current="page">champions</a>
         <a href="tournaments.html">tournaments</a>
-        <a href="predictor.html">predictor</a>
         <a href="teams.html">teams</a>
-        <a href="about.html">about</a>
+        <details class="site-nav__about">
+          <summary>about</summary>
+          <div class="site-nav__submenu" aria-label="Review pages">
+            <a href="about.html">about</a>
+            <a href="hosts.html">host nations</a>
+            <a href="participants.html">participant nations</a>
+            <a href="team-pages.html">team pages</a>
+            <a href="review.html">review pages</a>
+          </div>
+        </details>
+        <a class="site-nav__predictor" href="predictor.html">predictor</a>
       </nav>
     </header>
 
     <main class="champions-layout" id="champions-top">
-      <section class="champions-tribute">
-        <div class="champions-tribute__intro">
-          <div>
-            <p>
-              A tribute to the teams that have carried Rugby World Cup history, from the winners to the nearly-teams, with France included because reaching repeated finals without lifting the trophy still says a great deal about their place in the story.
-            </p>
-          </div>
-        </div>
-
-        <div class="champions-band champions-band--champions" aria-label="Champion rows">
-          <div class="champions-band__label"><span>champions</span></div>
-          <div class="champions-band__body">
-            <div class="champions-tribute__grid champions-tribute__grid--primary">
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>South Africa</p>
-              <div class="champions-tribute__headline stat-title"><strong>4</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>0</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>2</strong><span>bronzes</span></li>
-                <li class="stat-fourth"><strong>0</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>2</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>New Zealand</p>
-              <div class="champions-tribute__headline stat-title"><strong>3</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>2</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>3</strong><span>bronzes</span></li>
-                <li class="stat-fourth"><strong>1</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>0</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Australia</p>
-              <div class="champions-tribute__headline stat-title"><strong>2</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>2</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>1</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>1</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>1</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>England</p>
-              <div class="champions-tribute__headline stat-title"><strong>1</strong><span>title</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>3</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>0</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>1</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>2</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
+      <section class="champions-gallery-hero">
+        <div class="champions-gallery-hero__grid">
+          <article class="champions-gallery-hero__item">
+            <div class="champions-gallery-hero__media">
+              <strong>South Africa</strong>
             </div>
-          </div>
-        </div>
-
-        <div class="champions-band champions-band--finalists" aria-label="Finalist rows">
-          <div class="champions-band__label"><span>finalists</span></div>
-          <div class="champions-band__body">
-            <div class="champions-tribute__grid champions-tribute__grid--secondary">
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>France</p>
-              <div class="champions-tribute__headline stat-title"><strong>0</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>3</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>1</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>2</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>2</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Wales</p>
-              <div class="champions-tribute__headline stat-title"><strong>0</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>0</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>1</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>1</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>2</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Argentina</p>
-              <div class="champions-tribute__headline stat-title"><strong>0</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>0</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>1</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>2</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>2</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
-            <article class="champions-tribute__item">
-              <img class="champions-tribute__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Scotland</p>
-              <div class="champions-tribute__headline stat-title"><strong>0</strong><span>titles</span></div>
-              <ul class="champions-tribute__stats">
-                <li class="stat-runner-up"><strong>0</strong><span>runner-up</span></li>
-                <li class="stat-bronze"><strong>0</strong><span>bronze</span></li>
-                <li class="stat-fourth"><strong>1</strong><span>fourth</span></li>
-                <li class="stat-quarter"><strong>7</strong><span>quarter finals</span></li>
-              </ul>
-            </article>
+          </article>
+          <article class="champions-gallery-hero__item">
+            <div class="champions-gallery-hero__media">
+              <strong>New Zealand</strong>
             </div>
-          </div>
+          </article>
+          <article class="champions-gallery-hero__item">
+            <div class="champions-gallery-hero__media">
+              <strong>Australia</strong>
+            </div>
+          </article>
+          <article class="champions-gallery-hero__item">
+            <div class="champions-gallery-hero__media">
+              <strong>England</strong>
+            </div>
+          </article>
         </div>
+        <aside class="year-rail" aria-label="Champion year navigation">
+          <a class="year-rail__home" href="#champions-top" aria-label="Back to top">&#8593;</a>
+          <a href="#year-1987">1987</a>
+          <a href="#year-1991">1991</a>
+          <a href="#year-1995">1995</a>
+          <a href="#year-1999">1999</a>
+          <a href="#year-2003">2003</a>
+          <a href="#year-2007">2007</a>
+          <a href="#year-2011">2011</a>
+          <a href="#year-2015">2015</a>
+          <a href="#year-2019">2019</a>
+          <a href="#year-2023">2023</a>
+          <a href="#year-2027">2027</a>
+        </aside>
       </section>
 
-      <section class="champions-band champions-band--quarterfinalists" aria-label="Quarter-final teams">
-        <div class="champions-band__label"><span>quarter finalists</span></div>
-        <div class="champions-band__body champions-quarterfinal-band">
-          <div class="champions-quarterfinal-band__grid">
-            <article class="champions-quarterfinal-band__item">
-              <img class="champions-quarterfinal-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Ireland</p>
-              <div class="champions-quarterfinal-band__headline stat-quarter"><strong>8</strong><span>quarter finals</span></div>
-            </article>
-            <article class="champions-quarterfinal-band__item">
-              <img class="champions-quarterfinal-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Fiji</p>
-              <div class="champions-quarterfinal-band__headline stat-quarter"><strong>3</strong><span>quarter finals</span></div>
-            </article>
-            <article class="champions-quarterfinal-band__item">
-              <img class="champions-quarterfinal-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Samoa</p>
-              <div class="champions-quarterfinal-band__headline stat-quarter"><strong>2</strong><span>quarter finals</span></div>
-            </article>
-            <article class="champions-quarterfinal-band__item">
-              <img class="champions-quarterfinal-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Canada</p>
-              <div class="champions-quarterfinal-band__headline stat-quarter"><strong>1</strong><span>quarter finals</span></div>
-            </article>
-            <article class="champions-quarterfinal-band__item">
-              <img class="champions-quarterfinal-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-              <p>Japan</p>
-              <div class="champions-quarterfinal-band__headline stat-quarter"><strong>1</strong><span>quarter finals</span></div>
-            </article>
+      <section class="year-sections" aria-label="Champion year archive">
+        <article id="year-1987" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 1987 champions</div>
+          <div class="year-card__content">
+            <h2>1987</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> New Zealand / Australia</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
           </div>
-        </div>
+        </article>
+        <article id="year-1991" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 1991 champions</div>
+          <div class="year-card__content">
+            <h2>1991</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> England / France / Ireland / Scotland / Wales</p>
+              <p><strong>Champions:</strong> Australia</p>
+            </div>
+            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-1995" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 1995 champions</div>
+          <div class="year-card__content">
+            <h2>1995</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> South Africa</p>
+              <p><strong>Champions:</strong> South Africa</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-1999" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 1999 champions</div>
+          <div class="year-card__content">
+            <h2>1999</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Wales</p>
+              <p><strong>Champions:</strong> Australia</p>
+            </div>
+            <div class="flag-pill"><span>🇦🇺</span> Australia flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2003" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2003 champions</div>
+          <div class="year-card__content">
+            <h2>2003</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Australia</p>
+              <p><strong>Champions:</strong> England</p>
+            </div>
+            <div class="flag-pill"><span>🏴</span> England flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2007" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2007 champions</div>
+          <div class="year-card__content">
+            <h2>2007</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> France</p>
+              <p><strong>Champions:</strong> South Africa</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2011" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2011 champions</div>
+          <div class="year-card__content">
+            <h2>2011</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> New Zealand</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2015" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2015 champions</div>
+          <div class="year-card__content">
+            <h2>2015</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> England</p>
+              <p><strong>Champions:</strong> New Zealand</p>
+            </div>
+            <div class="flag-pill"><span>🇳🇿</span> New Zealand flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2019" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2019 champions</div>
+          <div class="year-card__content">
+            <h2>2019</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Japan</p>
+              <p><strong>Champions:</strong> South Africa</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2023" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2023 champions</div>
+          <div class="year-card__content">
+            <h2>2023</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> France</p>
+              <p><strong>Champions:</strong> South Africa</p>
+            </div>
+            <div class="flag-pill"><span>🇿🇦</span> South Africa flag placeholder</div>
+          </div>
+        </article>
+        <article id="year-2027" class="year-card">
+          <div class="year-card__media year-card__media--full">Placeholder photo area for 2027 champions</div>
+          <div class="year-card__content">
+            <h2>2027</h2>
+            <div class="year-card__meta">
+              <p><strong>Hosts:</strong> Australia</p>
+              <p><strong>Champions:</strong> Placeholder</p>
+            </div>
+            <div class="flag-pill"><span>🏳️</span> Champion flag placeholder</div>
+          </div>
+        </article>
       </section>
 
-      <section class="champions-band champions-band--participants" aria-label="Tournament attendance">
-        <div class="champions-band__label"><span>participants</span></div>
-        <div class="champions-band__body champions-attendance-band">
-          <div class="champions-attendance-band__grid">
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Canada</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Chile</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Georgia</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>7</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Hong Kong</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>1</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Italy</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>11</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Ivory Coast</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>1</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Namibia</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>7</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Portugal</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Romania</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Russia</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Spain</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>2</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Tonga</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>10</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>USA</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>9</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Uruguay</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>6</strong><span>tournaments</span></div>
-          </article>
-          <article class="champions-attendance-band__item">
-            <img class="champions-attendance-band__emblem" src="assets/icons/rwc2023-logo-symbol.svg" alt="" aria-hidden="true" />
-            <p>Zimbabwe</p>
-            <div class="champions-attendance-band__headline stat-quarter"><strong>3</strong><span>tournaments</span></div>
-          </article>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <p class="site-title">a rugby world cup livery</p>
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
     </footer>
   </body>
 </html>

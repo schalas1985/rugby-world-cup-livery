@@ -18,15 +18,24 @@
 </head>
 <body class="page-teams">
   <header class="site-header">
-    <p class="site-title">a rugby world cup livery</p>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">home</a>
-      <a href="champions.html">champions</a>
-      <a href="tournaments.html">tournaments</a>
-      <a href="predictor.html">predictor</a>
+    <a class="site-title" href="index.html">a rugby world cup livery</a>
+          <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">home</a>
+        <a href="champions.html">champions</a>
+        <a href="tournaments.html">tournaments</a>
         <a href="teams.html" aria-current="page">teams</a>
-      <a href="about.html">about</a>
-    </nav>
+        <details class="site-nav__about">
+          <summary>about</summary>
+          <div class="site-nav__submenu" aria-label="Review pages">
+            <a href="about.html">about</a>
+            <a href="hosts.html">host nations</a>
+            <a href="participants.html">participant nations</a>
+            <a href="team-pages.html">team pages</a>
+            <a href="review.html">review pages</a>
+          </div>
+        </details>
+        <a class="site-nav__predictor" href="predictor.html">predictor</a>
+      </nav>
   </header>
     <main class="teams-layout">
       <div class="team-page-tools">
@@ -139,7 +148,7 @@
       </section>
     </main>
     <footer class="site-footer">
-      <p class="site-title">a rugby world cup livery</p>
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
     </footer>
   </body>
 </html>
