@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -31,6 +31,7 @@
             <a href="hosts.html">host nations</a>
             <a href="participants.html">participant nations</a>
             <a href="team-pages.html">team pages</a>
+            <a href="predictor-memory.html">predictor archive</a>
             <a href="review.html">review pages</a>
           </div>
         </details>
@@ -40,105 +41,273 @@
 
     <main>
       <section class="hero hero-home">
-        <div class="hero-card" aria-hidden="true"></div>
+        <div class="hero-home__inner">
+          <div class="hero-card">
+            <img
+              class="hero-card__image"
+              src="assets/homepage-hero.png"
+              alt="Webb Ellis Cup with Rugby World Cup ball"
+            />
+          </div>
 
-        <div class="hero-copy">
-          <h1>
-            a
-            <span>rugby</span>
-            <span>world cup</span>
-            <span>livery</span>
-          </h1>
-          <p class="hero-text">
-            A personal project built to learn by doing, stay close to the sport,
-            and turn Rugby World Cup history into something easier to explore.
-            The aim is a clear archive that feels visual, useful, and genuinely
-            enjoyable to move through.
-          </p>
+          <div class="hero-copy">
+            <h1>
+              a rugby
+              <span>world cup</span>
+              <span>livery</span>
+            </h1>
+            <p class="hero-text hero-text--lead">champions, nations, eras</p>
+            <p class="hero-text hero-text--support">
+              A designed record of the men&apos;s Rugby World Cup<br>told through tournament editions, champions, and<br>the teams that shaped it.
+            </p>
+          </div>
         </div>
 
-        <a class="hero-scroll-cue" href="#tournament-history" aria-label="Scroll to tournament history">
-          <span class="hero-scroll-cue__mouse" aria-hidden="true">
-            <span class="hero-scroll-cue__wheel"></span>
+        <a class="hero-scroll-cue" id="scroll-right-cue" aria-label="Scroll to tournament history">
+          <span class="hero-scroll-cue__arrow" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
+          <span class="hero-scroll-cue__label hero-scroll-cue__label--fwd">scroll</span>
+          <span class="hero-scroll-cue__label hero-scroll-cue__label--back">home</span>
         </a>
 
       </section>
 
-      <section class="history-drawer" aria-label="History of rugby">
-        <details class="history-drawer__details">
-          <summary>history of rugby <span>&#9662;</span></summary>
-          <div class="history-snake">
-            <article class="history-snake__item"><strong>1823</strong><p>Origin story placeholder for the sport's folklore and earliest school roots.</p></article>
-            <article class="history-snake__item"><strong>1871</strong><p>International rugby placeholder marking early union organisation and first test era.</p></article>
-            <article class="history-snake__item"><strong>1888</strong><p>Touring culture placeholder showing how rugby history became global and visible.</p></article>
-            <article class="history-snake__item"><strong>1905</strong><p>Iconic touring side placeholder for the game becoming part of national identity.</p></article>
-            <article class="history-snake__item"><strong>1987</strong><p>World Cup begins and the archive transitions from rugby history into tournament history.</p></article>
-          </div>
-        </details>
-      </section>
+      <section class="h-timeline" id="tournament-history" aria-label="Tournament history">
+        <p class="h-timeline__label" id="h-timeline-label">Tournament Chronicle</p>
+        <div class="h-timeline__track">
 
-      <section class="tournament-timeline" id="tournament-history" aria-label="Tournament history">
-        <div class="tournament-timeline__heading">
-          <h2>History of the tournament</h2>
+          <div class="h-timeline__start-cap" aria-hidden="true">
+            <div class="h-timeline__start-line"></div>
+          </div>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 01</span>
+              <strong class="h-timeline__year">1987</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">First tournament, first archive marker</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.</p>
+                <a class="timeline-link" href="tournaments-1987.html">Enter 1987</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 02</span>
+              <strong class="h-timeline__year">1991</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">The tournament grows across host nations</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <a class="timeline-link" href="tournaments-1991.html">Enter 1991</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 03</span>
+              <strong class="h-timeline__year">1995</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">One of the defining editions</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                <a class="timeline-link" href="tournaments-1995.html">Enter 1995</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 04</span>
+              <strong class="h-timeline__year">1999</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">More pathways, more complexity</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident sunt in culpa officia.</p>
+                <a class="timeline-link" href="tournaments-1999.html">Enter 1999</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 05</span>
+              <strong class="h-timeline__year">2003</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">High-stakes era, modern final</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                <a class="timeline-link" href="tournaments-2003.html">Enter 2003</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 06</span>
+              <strong class="h-timeline__year">2007</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">France and a global showcase</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit fugit.</p>
+                <a class="timeline-link" href="tournaments-2007.html">Enter 2007</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 07</span>
+              <strong class="h-timeline__year">2011</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">New Zealand reclaims the cup</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minima veniam quis nostrum exercitationem ullam corporis.</p>
+                <a class="timeline-link" href="tournaments-2011.html">Enter 2011</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 08</span>
+              <strong class="h-timeline__year">2015</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">England opens a new chapter</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</p>
+                <a class="timeline-link" href="tournaments-2015.html">Enter 2015</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 09</span>
+              <strong class="h-timeline__year">2019</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">Asia takes the world stage</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis.</p>
+                <a class="timeline-link" href="tournaments-2019.html">Enter 2019</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 10</span>
+              <strong class="h-timeline__year">2023</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">France writes its edition</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero tempore cum soluta nobis eligendi optio cumque nihil impedit.</p>
+                <a class="timeline-link" href="tournaments-2023.html">Enter 2023</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="h-timeline__item">
+            <div class="h-timeline__top">
+              <span class="h-timeline__edition">Edition 11</span>
+              <strong class="h-timeline__year">2027</strong>
+            </div>
+            <div class="h-timeline__tick" aria-hidden="true"></div>
+            <div class="h-timeline__bottom">
+              <div class="h-timeline__card">
+                <h3 class="h-timeline__title">The next chapter awaits</h3>
+                <p class="h-timeline__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temporibus autem quibusdam et aut officiis debitis rerum necessitatibus.</p>
+                <a class="timeline-link" href="tournaments-2027.html">Enter 2027</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="h-timeline__origins-cap">
+            <a class="h-timeline__origins-btn" href="about.html#origins">rugby origins</a>
+          </div>
+
         </div>
-        <div class="tournament-timeline__line" aria-hidden="true"></div>
-
-        <article class="tournament-timeline__item tournament-timeline__item--left">
-          <div class="tournament-timeline__media">1987 tournament poster / winning moment</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">1987</p>
-            <h2>First tournament, first archive marker</h2>
-            <p>The story begins with co-hosted foundations in New Zealand and Australia, and the tournament establishes the visible thread that runs through this whole site.</p>
-          </div>
-        </article>
-
-        <article class="tournament-timeline__item tournament-timeline__item--right">
-          <div class="tournament-timeline__media">1991 tournament poster / final moment</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">1991</p>
-            <h2>The tournament grows across host nations</h2>
-            <p>A broader hosting footprint and stronger international shape start to make the World Cup feel like a recurring global event rather than a one-off launch.</p>
-          </div>
-        </article>
-
-        <article class="tournament-timeline__item tournament-timeline__item--left">
-          <div class="tournament-timeline__media">1995 tournament poster / cultural moment</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">1995</p>
-            <h2>One of the defining editions</h2>
-            <p>The 1995 tournament stands as one of the most emotionally and culturally significant editions, and it becomes a key anchor point in the archive.</p>
-          </div>
-        </article>
-
-        <article class="tournament-timeline__item tournament-timeline__item--right">
-          <div class="tournament-timeline__media">1999 tournament poster / expanded knockout drama</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">1999</p>
-            <h2>More pathways, more complexity</h2>
-            <p>By 1999 the format creates more routes through the knockout bracket, which is exactly the kind of structure this archive eventually wants to explain clearly.</p>
-          </div>
-        </article>
-
-        <article class="tournament-timeline__item tournament-timeline__item--left">
-          <div class="tournament-timeline__media">2003 tournament poster / final memory</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">2003</p>
-            <h2>High-stakes era</h2>
-            <p>The early 2000s push the tournament further into the modern televised era, with memorable finals and stronger global familiarity.</p>
-          </div>
-        </article>
-
-        <article class="tournament-timeline__item tournament-timeline__item--right">
-          <div class="tournament-timeline__media">2007 to 2027 placeholders</div>
-          <div class="tournament-timeline__content">
-            <p class="tournament-timeline__year">2007 to 2027</p>
-            <h2>The archive keeps moving</h2>
-            <p>The remaining tournament editions can continue down this timeline, giving the homepage a clearer role: introduce the tournament story first, then let other pages handle deeper slices.</p>
-          </div>
-        </article>
       </section>
     </main>
+
+    <script>
+      (function () {
+        var mainEl = document.querySelector('body.page-home main');
+        var scrollCue = document.getElementById('scroll-right-cue');
+        var label = document.getElementById('h-timeline-label');
+        var startCap = document.querySelector('.h-timeline__start-cap');
+
+        if (!mainEl) return;
+
+        // Click: scroll right or back to hero depending on state
+        if (scrollCue) {
+          scrollCue.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (scrollCue.classList.contains('is-reversed')) {
+              mainEl.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              mainEl.scrollTo({ left: window.innerWidth, behavior: 'smooth' });
+            }
+          });
+        }
+
+        function updateUI() {
+          var max = mainEl.scrollWidth - mainEl.clientWidth;
+          var pos = mainEl.scrollLeft;
+          var atStart = pos <= 20;
+          var atEnd = pos >= max - 20;
+
+          // Arrow: visible only at start or end; direction flips at end
+          if (scrollCue) {
+            scrollCue.classList.toggle('is-hidden', !atStart && !atEnd);
+            scrollCue.classList.toggle('is-reversed', atEnd && !atStart);
+          }
+
+          // Tournament Chronicle label: appears when start-cap vertical line
+          // reaches screen centre; tracks it until it hits the left edge
+          if (label && startCap) {
+            var rect = startCap.getBoundingClientRect();
+            var lineX = rect.left + rect.width / 2;
+            var halfScreen = window.innerWidth / 2;
+
+            if (lineX > halfScreen) {
+              label.style.opacity = '0';
+            } else {
+              label.style.opacity = '1';
+              var desired = lineX - label.offsetWidth - 8;
+              label.style.left = Math.max(8, desired) + 'px';
+            }
+          }
+        }
+
+        mainEl.addEventListener('scroll', updateUI, { passive: true });
+        updateUI();
+      })();
+    </script>
 
     <footer class="site-footer">
       <a class="site-title" href="index.html">a rugby world cup livery</a>
