@@ -15,37 +15,78 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-      <script src="tournament-selector.js" defer></script>
+      <script src="tournament-selector.js"></script>
   </head>
   <body class="page-tournaments">
 <header class="site-header">
-  <p class="site-title">a rugby world cup livery</p>
-  <nav class="site-nav" aria-label="Primary">
-    <a href="index.html">home</a>
-    <a href="champions.html">champions</a>
-    <a href="tournaments.html" aria-current="page">tournaments</a>
-    <a href="predictor.html">predictor</a>
+  <a class="site-title" href="index.html">a rugby world cup livery</a>
+        <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">home</a>
+        <a href="champions.html">champions</a>
+        <a href="tournaments.html" aria-current="page">tournaments</a>
         <a href="teams.html">teams</a>
-    <a href="about.html">about</a>
-  </nav>
+        <details class="site-nav__about">
+          <summary>about</summary>
+          <div class="site-nav__submenu" aria-label="Review pages">
+            <a href="about.html">about</a>
+            <a href="hosts.html">host nations</a>
+            <a href="participants.html">participant nations</a>
+            <a href="team-pages.html">team pages</a>
+            <a href="predictor-memory.html">predictor archive</a>
+            <a href="review.html">review pages</a>
+          </div>
+        </details>
+        <a class="site-nav__predictor" href="predictor.html">predictor</a>
+      </nav>
 </header>
 
     <main class="tournaments-layout">
       <section class="tournament-hub-hero">
-        <div class="tournament-hub-hero__placeholder">
-          <div class="tournament-hub-hero__poster" aria-hidden="true">
-            <span>tournaments hero placeholder</span>
-          </div>
-          <div class="tournament-hub-hero__copy">
-            <h1>tournaments</h1>
-            <p>A tournament-by-tournament way into the Rugby World Cup archive, starting with the summary table below and then opening into each year.</p>
-            <p>Use the selector below to move through each tournament page. The year artwork now lives inside its matching year page so we can test how each tournament identity should sit inside the archive.</p>
-          </div>
+        <div class="tournament-hub-hero__grid">
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 1987.jpg" alt="1987 tournament logo" /></div>
+            <p>1987</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 1991.jpg" alt="1991 tournament logo" /></div>
+            <p>1991</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 1995.jpg" alt="1995 tournament logo" /></div>
+            <p>1995</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 1999.jpg" alt="1999 tournament logo" /></div>
+            <p>1999</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2003.jpg" alt="2003 tournament logo" /></div>
+            <p>2003</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2007.jpg" alt="2007 tournament logo" /></div>
+            <p>2007</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2011.jpg" alt="2011 tournament logo" /></div>
+            <p>2011</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2015.jpg" alt="2015 tournament logo" /></div>
+            <p>2015</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2019.jpg" alt="2019 tournament logo" /></div>
+            <p>2019</p>
+          </article>
+          <article class="tournament-hub-hero__card">
+            <div class="tournament-hub-hero__logo"><img class="tournament-hub-hero__logo-image" src="assets/tournaments/tournament - 2023.jpg" alt="2023 tournament logo" /></div>
+            <p>2023</p>
+          </article>
         </div>
 <aside class="tournament-hub-hero__nav" aria-label="Tournament navigation">
   <div class="tournament-hero__selector" id="year-selector">
-    <span class="tournament-hero__arrow is-disabled" aria-hidden="true">&larr;</span>
-    <span class="tournament-hero__year-pill is-current" aria-current="page">home</span>
+    <span class="tournament-hero__year-pill is-current" aria-current="page">1987</span>
     <a class="tournament-hero__arrow" href="tournaments-1987.html" aria-label="Go to 1987">&rarr;</a>
   </div>
 </aside>
@@ -89,7 +130,7 @@
     </main>
 
     <footer class="site-footer">
-      <p class="site-title">a rugby world cup livery</p>
+      <a class="site-title" href="index.html">a rugby world cup livery</a>
     </footer>
   </body>
 </html>

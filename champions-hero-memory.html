@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Predictor | Rugby World Cup Livery</title>
+    <title>Champions Hero Memory | Rugby World Cup Livery</title>
     <meta
       name="description"
-      content="The Rugby World Cup predictor is currently under construction."
+      content="Saved review page for the previous champions hero treatment."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-predictor">
+  <body class="page-champions-memory">
     <header class="site-header">
       <a class="site-title" href="index.html">a rugby world cup livery</a>
       <nav class="site-nav" aria-label="Primary">
@@ -24,30 +24,41 @@
         <a href="champions.html">champions</a>
         <a href="tournaments.html">tournaments</a>
         <a href="teams.html">teams</a>
-        <details class="site-nav__about">
-          <summary>about</summary>
+        <details class="site-nav__about is-current" open>
+          <summary aria-current="page">about</summary>
           <div class="site-nav__submenu" aria-label="Review pages">
             <a href="about.html">about</a>
             <a href="hosts.html">host nations</a>
             <a href="participants.html">participant nations</a>
             <a href="team-pages.html">team pages</a>
-            <a href="predictor-memory.html">predictor archive</a>
+            <a href="champions-hero-memory.html" aria-current="page">champions hero memory</a>
+            <a href="tournaments-hero-memory.html">tournaments hero memory</a>
             <a href="review.html">review pages</a>
           </div>
         </details>
-        <a class="site-nav__predictor" href="predictor.html" aria-current="page">predictor</a>
+        <a class="site-nav__predictor" href="predictor.html">predictor</a>
       </nav>
     </header>
 
-    <main class="predictor-layout predictor-layout--holding">
-      <section class="predictor-holding">
-        <div class="predictor-holding__panel">
-          <p class="predictor-holding__eyebrow">Predictor</p>
-          <h1>Under construction...</h1>
-          <p>
-            This part of the project is being rebuilt and will return in a later phase.
+    <main class="page-shell">
+      <section class="page-panel">
+        <p class="about-kicker">Memory page</p>
+        <h1>Champions Hero Memory</h1>
+        <p>This keeps the earlier champions hero treatment available locally while we compare alternative layouts.</p>
+      </section>
+
+      <section class="hero hero-home hero-champions">
+        <div class="hero-card" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1>
+            champions
+            <span>through the</span>
+            <span>years and</span>
+            <span>moments</span>
+          </h1>
+          <p class="hero-text">
+            This page now holds the visual year-by-year champion archive that used to sit on the homepage. It is the image-led tribute layer of the site, while tournaments and teams can take care of deeper structure.
           </p>
-          <a class="timeline-link" href="about.html">Go to the memory bank</a>
         </div>
       </section>
     </main>
