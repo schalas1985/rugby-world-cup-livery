@@ -3424,8 +3424,28 @@ body.page-home .hero-scroll-cue.is-reversed .hero-scroll-cue__label--back {
    ═══════════════════════════════════════════════════ */
 
 body.page-rugby-origins {
-  background: var(--accent-navy);
+  background: #fff;
   color: var(--ink);
+}
+
+/* Coming-soon holding page */
+.origins-coming-soon {
+  min-height: calc(100dvh - 4.3125rem);
+  margin-top: 4.3125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem var(--edge-gap);
+  background: #fff;
+}
+
+.origins-coming-soon__image {
+  max-width: min(860px, 100%);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .origins-hero {
