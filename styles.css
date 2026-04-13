@@ -3202,12 +3202,12 @@ body.page-home .history-snake__item p {
   transform: translateX(-50%);
 }
 
-/* Tournament items — 55% of track height, centred; grid splits top/tick/bottom equally */
+/* Tournament items — 70% of track height, centred; grid splits top/tick/bottom equally */
 .h-timeline__item {
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-self: center;
-  height: 55%;
+  height: 70%;
   width: 300px;
   flex-shrink: 0;
   padding: 0 1.25rem;
@@ -3227,7 +3227,7 @@ body.page-home .history-snake__item p {
 .h-timeline__edition {
   display: block;
   font-family: "DM Sans", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -3303,6 +3303,10 @@ body.page-home .history-snake__item p {
   font-size: 0.78rem;
   line-height: 1.65;
   color: rgba(245, 238, 228, 0.45);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .h-timeline__bottom .timeline-link {
@@ -3413,4 +3417,113 @@ body.page-home .hero-scroll-cue.is-reversed .hero-scroll-cue__label--fwd {
 
 body.page-home .hero-scroll-cue.is-reversed .hero-scroll-cue__label--back {
   display: block;
+}
+
+/* ═══════════════════════════════════════════════════
+   RUGBY ORIGINS PAGE
+   ═══════════════════════════════════════════════════ */
+
+body.page-rugby-origins {
+  background: var(--accent-navy);
+  color: var(--ink);
+}
+
+.origins-hero {
+  position: relative;
+  height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Animated background image */
+.origins-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+@keyframes origins-ken-burns {
+  0%   { transform: scale(1)    translateX(0)      translateY(0); }
+  100% { transform: scale(1.12) translateX(-2%)    translateY(-1%); }
+}
+
+.origins-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  animation: origins-ken-burns 14s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+/* Dark gradient over image so text is legible */
+.origins-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(10, 18, 38, 0.92) 0%,
+    rgba(10, 18, 38, 0.55) 45%,
+    rgba(10, 18, 38, 0.15) 100%
+  );
+}
+
+/* Content sits above overlay */
+.origins-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--edge-gap) var(--edge-gap) calc(var(--edge-gap) * 1.5);
+  max-width: 720px;
+}
+
+.origins-hero__kicker {
+  margin: 0 0 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b44604;
+}
+
+.origins-hero__title {
+  margin: 0 0 1.25rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: rgba(245, 238, 228, 0.97);
+}
+
+.origins-hero__text {
+  margin: 0 0 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(245, 238, 228, 0.65);
+  max-width: 560px;
+}
+
+.origins-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: #b44604;
+  text-decoration: none;
+  border: 1px solid rgba(180, 70, 4, 0.4);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.origins-hero__back:hover {
+  background: rgba(180, 70, 4, 0.1);
+  border-color: rgba(180, 70, 4, 0.7);
 }
