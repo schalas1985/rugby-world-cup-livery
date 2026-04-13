@@ -260,17 +260,26 @@
         var scrollCue = document.getElementById('scroll-right-cue');
         var label = document.getElementById('h-timeline-label');
         var startCap = document.querySelector('.h-timeline__start-cap');
+        var items = document.querySelectorAll('.h-timeline__item');
 
         if (!mainEl) return;
 
-        // Click: scroll right or back to hero depending on state
+        // Click: center 1987 item on screen, or back to hero
         if (scrollCue) {
           scrollCue.addEventListener('click', function (e) {
             e.preventDefault();
             if (scrollCue.classList.contains('is-reversed')) {
               mainEl.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-              mainEl.scrollTo({ left: window.innerWidth, behavior: 'smooth' });
+              // Center the 1987 item (first item) in the viewport
+              var firstItem = items[0];
+              if (firstItem) {
+                var itemRect = firstItem.getBoundingClientRect();
+                var scrollTarget = mainEl.scrollLeft + itemRect.left + itemRect.width / 2 - window.innerWidth / 2;
+                mainEl.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+              } else {
+                mainEl.scrollTo({ left: window.innerWidth, behavior: 'smooth' });
+              }
             }
           });
         }
@@ -287,19 +296,28 @@
             scrollCue.classList.toggle('is-reversed', atEnd && !atStart);
           }
 
-          // Tournament Chronicle label: appears when start-cap vertical line
-          // reaches screen centre; tracks it until it hits the left edge
-          if (label && startCap) {
-            var rect = startCap.getBoundingClientRect();
-            var lineX = rect.left + rect.width / 2;
-            var halfScreen = window.innerWidth / 2;
+          // Tournament Chronicle label: appears when 1991 (second item) enters the viewport;
+          // then tracks the vertical start-line until it scrolls off the left edge
+          if (label && startCap && items.length >= 2) {
+            var item1991 = items[1]; // second item = 1991
+            var item1991Rect = item1991.getBoundingClientRect();
+            var labelVisible = item1991Rect.left < window.innerWidth;
 
-            if (lineX > halfScreen) {
+            if (!labelVisible) {
               label.style.opacity = '0';
             } else {
-              label.style.opacity = '1';
-              var desired = lineX - label.offsetWidth - 8;
-              label.style.left = Math.max(8, desired) + 'px';
+              var rect = startCap.getBoundingClientRect();
+              var lineX = rect.left + rect.width / 2;
+
+              if (lineX < -label.offsetWidth) {
+                // Vertical line fully off-screen left — hide
+                label.style.opacity = '0';
+              } else {
+                // Label sits 16px to the RIGHT of the vertical line,
+                // minimum 16px from left edge when line goes off-screen
+                label.style.opacity = '1';
+                label.style.left = Math.max(16, lineX + 16) + 'px';
+              }
             }
           }
         }
