@@ -3202,26 +3202,25 @@ body.page-home .history-snake__item p {
   transform: translateX(-50%);
 }
 
-/* Tournament items — 45% height, centred on track */
+/* Tournament items — 55% of track height, centred; grid splits top/tick/bottom equally */
 .h-timeline__item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
   align-self: center;
-  height: 45%;
+  height: 55%;
   width: 300px;
   flex-shrink: 0;
-  padding: 1.5rem 1.25rem;
+  padding: 0 1.25rem;
   position: relative;
 }
 
-/* Top: edition + year, centred, padding clears absolute tick */
+/* Top: year/edition sit at bottom of this row — 1rem gap to tick top */
 .h-timeline__top {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: calc(26px + 2.5rem);
+  padding-bottom: 1rem;
   text-align: center;
 }
 
@@ -3245,15 +3244,13 @@ body.page-home .history-snake__item p {
   color: rgba(245, 238, 228, 0.95);
 }
 
-/* Tick / node — absolutely locked to horizontal line at item's 50% */
+/* Tick / node — sits in grid auto row, naturally centred at item midpoint */
 .h-timeline__tick {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   width: 2px;
   height: 52px;
   background: #b44604;
+  position: relative;
   z-index: 2;
 }
 
@@ -3270,17 +3267,19 @@ body.page-home .history-snake__item p {
   transform: translate(-50%, -50%);
 }
 
-/* Bottom: card with heading + copy + link, padding clears absolute tick */
+/* Bottom: card fills this row — 1rem gap from tick bottom, matching the gap above */
 .h-timeline__bottom {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: calc(26px + 2.5rem);
+  padding-top: 1rem;
+  min-height: 0;
 }
 
 .h-timeline__card {
   flex: 1;
+  min-height: 0;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
