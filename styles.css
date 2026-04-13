@@ -3198,23 +3198,25 @@ body.page-home .history-snake__item p {
   transform: translateX(-50%);
 }
 
-/* Tournament items */
+/* Tournament items — constrained to 55% of track, centred vertically */
 .h-timeline__item {
   display: grid;
   grid-template-rows: 1fr auto 1fr;
+  align-self: center;
+  height: 55%;
   width: 300px;
   flex-shrink: 0;
-  padding: 1.5rem 1.25rem;
+  padding: 0 1.25rem;
   position: relative;
 }
 
-/* Top: edition + year, centred above tick */
+/* Top: edition + year sit at bottom of this row with a fixed gap to tick */
 .h-timeline__top {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 
@@ -3262,16 +3264,19 @@ body.page-home .history-snake__item p {
   transform: translate(-50%, -50%);
 }
 
-/* Bottom: card with heading + copy + link */
+/* Bottom: card fills this row with the same 1rem gap from the tick */
 .h-timeline__bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 0.75rem;
+  padding-top: 1rem;
+  min-height: 0;
 }
 
 .h-timeline__card {
   flex: 1;
+  min-height: 0;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
